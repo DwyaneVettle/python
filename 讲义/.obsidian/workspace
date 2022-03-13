@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "1f7d9b647698731f",
+    "type": "split",
+    "children": [
+      {
+        "id": "28000c63bef12858",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Python基础/第六章 Python集合和固定集合.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d6220d2f82a2a8b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c1bad334322767d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9095980e27f258cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "33c2adc94b3e6335",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "be61128c62f39572",
+    "type": "split",
+    "children": [
+      {
+        "id": "981b99fa7538a2e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87d401dc06b6959b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python基础/第六章 Python集合和固定集合.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "28000c63bef12858",
+  "lastOpenFiles": [
+    "Python基础/第六章 Python集合和固定集合.md",
+    "面向对象/类与面向对象.md",
+    "第五章 Python字典.md",
+    "第二章 Python基础.md",
+    "未命名.md",
+    "第三章 Python流程控制.md"
+  ]
+}
