@@ -148,6 +148,21 @@ for i in lst:
 | insert()      | 在列表的任意位置添加一个元素，参数为两个，第一个为索引，第二个为添加元素 |
 | 切片          | 在列表的任意位置至少添加一个元素                             |
 
+```python
+# 列表的添加
+list01 = ['python', 'java', 'php', 'html', 'js']
+# 1.append():在末尾添加一个元素
+list01.append('c++')
+print(list01)
+# 2.extend():在末尾至少添加一个元素,如果是多个，那必须是另一个列表
+list02 = ['c', '仓颉', '易']
+list01.extend(list02)
+print(list01)
+# 3.insert():将元素插入到指定位置,第一个参数为索引值，第二个参数为插入元素
+list01.insert(1, 'golang')
+print(list01)
+```
+
 
 
 ## 7.列表元素的删除
@@ -160,7 +175,34 @@ for i in lst:
 | pop()         | 1.删除指定索引位置上的元素；2.指定位置不存在则抛出IndexError;3.不指定索引，删除列表最后一个元素 |
 | 切片          | 一次至少删除一个元素                                         |
 | clear()       | 清空列表                                                     |
-| del           | 删除列表                                                     |
+| del()         | 删除列表                                                     |
+
+```python
+# 删除列表
+list01 = ['python', 'java', 'php', 'html', 'js']
+# del：删除列表中指定位置的元素,如果直接删除列表，那么列表就会被GC
+# del list01
+del list01[-1]
+print(list01)
+
+# remove():删除某一个元素，但是列表中如果有同名的元素，则只删除第一个
+list02 = ['python', 'java', 'php', 'html', 'js', 'python']
+list02.remove('python')
+list02.remove('php')
+# list02.remove('ruby')  ValueError
+print(list02)
+
+# pop():删除元素，没有传参的情况下删除的是最后一个元素,是以下标作为参数
+list03 = [1, 2, 3, 4, 5, 'aa']
+list03.pop(2)
+list03.pop()
+# list03.pop(6)
+print(list03)
+
+# clear():清除列表所有元素，但是列表名仍然存在
+list03.clear()
+print(list03)
+```
 
 
 
