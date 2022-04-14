@@ -272,3 +272,49 @@ lst2 = [i*2 for i in range(1, 6)]
 print(lst2)
 ```
 
+## 11.深拷贝和浅拷贝
+
+**浅拷贝**：复制过程中，只复制一层变量， 不会深层变量绑定的对象的复制过程；
+
+**深拷贝**：复制整个依赖过程。
+
+```python
+list01 = [800,1000]
+# 通过切片获取元素，会创建新列表.
+list02 = list01[:]
+list01[0] = 900
+print(list02[0])#?800
+list01 = [500]
+print(list02[0])#?800
+
+# 列表套列表
+list01 = [800,[1000,500]]
+list02 = list01
+list01[1][0] = 900
+print(list02[1][0])#?900
+
+
+list01 = [800,[1000,500]]
+# 浅拷贝
+# list02 = list01[:]
+list02 = list01.copy()
+list01[1][0] = 900
+print(list02[1][0])#?900
+
+
+import copy
+
+list01 = [800,[1000,500]]
+# 深拷贝
+list02 =copy.deepcopy(list01)
+list01[1][0] = 900
+print(list02[1][0])#?
+```
+
+![列表内存图04](第四章 Python列表.assets/列表内存图04-1649728499894.jpg)
+
+![列表内存图05](第四章 Python列表.assets/列表内存图05.jpg)
+
+![列表内存图06](第四章 Python列表.assets/列表内存图06.jpg)
+
+![列表内存图07](第四章 Python列表.assets/列表内存图07-1649728516044.jpg)
