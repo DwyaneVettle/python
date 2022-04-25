@@ -39,14 +39,34 @@ def 函数名(形式参数):
 return 需要返回的数据
 ```
 
-​	说明：return后没有数据相当于None，函数体没有return，相当于None。
+函数能让我们的程序更加的灵活：
+
+```python
+def weather():
+    print("日期：4月20日")
+    print("温度：10-28℃")
+    print("空气状况：良")
+
+weather()
+
+def m_weather(today, temp,air):
+    print(f"日期：{today}")
+    print(f"温度：{temp}")
+    print(f"空气质量：{air}")
+
+m_weather("4月20号", "20℃", "优")
+```
+
+
+
+说明：**return后没有数据相当于None，函数体没有return，相当于None。**
 
 ```python
 # 函数返回值
 def fun01(acount):
     print("fun01()执行了")
     return 20
-	print("fun01()又执行了") # return后的语句不会执行
+	# print("fun01()又执行了") # return后的语句不会执行
 
 re = fun01(10)
 print(re)
@@ -57,7 +77,7 @@ def fun02(a):
 
 
 re02 = fun02(100)
-print(re02)
+print(re02)  # None
 ```
 
 ```python
@@ -97,13 +117,13 @@ def print_rectangle(r_count, c_count, char):
     :param c_count: 列数
     :param char: 填充的字符　
     """
-    for r in range(r_count):
+    for r in range(r_count,c_count):
         # 内层循环控制列　
-        for c in range(c_count):
+        for c in range(r):
             print(char, end=" ")
         print()
 
-print_rectangle(5, 2, "#")
+print_rectangle(1, 5, "*")
 ```
 
 
@@ -120,7 +140,7 @@ num01 = 1
 # 用于存储在函数内部定义的变量(包含参数).
 fun01(num01)
 # 函数执行完毕后，栈帧立即释放(其中定义的变量也会销毁).
-print(num01)#1
+print(num01) #1
 
 def fun02(a):
     # 改变的是传入的可变对象
@@ -128,7 +148,7 @@ def fun02(a):
 
 list01 = [1]
 fun02(list01)
-print(list01[0])# 100
+print(list01[0]) # 100
 
 def fun03(a):
     # 改变的是fun03栈帧中变量a的指向
@@ -147,7 +167,7 @@ print(list01[0])# 1
 
 ## 4.作用域LEGB
 
-​	函数中变量的作用域就是它起作用的范围，作用域有4中分类：局部作用域Local--函数内部；外部嵌套作用域Enclosing--函数嵌套；全局作用域Global--模块(.py文件)内部；内置模块作用域Builtin--builtins.py文件内。
+​	函数中变量的作用域就是它起作用的范围，作用域有4中分类：局部作用域Local--函数内部；外部嵌套作用域Enclosing--函数嵌套；全局作用域global--模块(.py文件)内部；内置模块作用域Builtin--builtins.py文件内。
 
 ```python
 # 函数的作用域
@@ -278,7 +298,7 @@ def fun02(a=0, b=0, c=0, d=0):
     print(d)
 
 
-# 星号元组形参：*将实参合并成一个元组，再传给形参-手机多余位置的参数
+# 星号元组形参：*将实参合并成一个元组，再传给形参-收集多余位置的参数
 # 形参的命名一般为args
 def fun03(*args):
     print(args)
