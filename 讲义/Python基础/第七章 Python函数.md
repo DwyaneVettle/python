@@ -199,6 +199,18 @@ print(g01)  # ok
 
 ​	定义在函数内部的变量(形参也是局部变量)，只能在函数内部使用，调用函数时才被创建，函数结束后自动销毁。
 
+```python
+def fun01():
+    # 局部变量
+    name = 'python'
+    # 内部访问
+    print(name)
+
+fun01()
+# 外部访问局部变量报错
+# print(name)
+```
+
 
 
 ### 4.2.全局变量
@@ -209,6 +221,25 @@ print(g01)  # ok
 
 ```python
 global 变量1,变量2.....
+```
+
+```python
+def fun01():
+    # 局部变量
+    global name
+    name = 'python'
+    # 内部访问
+    print(name)
+
+fun01()
+# 外部访问局部变量报错
+print(name)
+
+
+def fun02():
+    print(name)
+# 其他函数也能访问全局变量
+fun02()
 ```
 
 
@@ -381,4 +412,189 @@ print(adds(1, 4, 5, 6))
 
 
 
+
+## 6.递归函数
+
+​	递归是一个函数过程在定义中直接或间接调用自身的一种方法，它通过把一个大型的复杂问题转换为一个与原问题相似，但规模较小的问题进行求解，减少了代码量。
+
+​	函数递归调用时，需要确定两点：一是递归公式，而是边界条件。递归公式是函数求解过程的归纳项，用于处理原问题和原问题类似的子问题。边界调节用于终止递归的调用。
+
+​	例：求10的阶乘：
+
+```python
+def factorial(num):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        return num * factorial(num - 1)
+
+
+print(factorial(10))
+```
+
+
+
+**练习：利用递归实现斐波那契数：0，1，1，2，3，5，8，13.....**
+
+用递归推导可以看出规F(0)=0，F(1)=1, F(n)=F(n - 1)+F(n - 2)（n ≥ 2，n ∈ N）：
+
+```python
+def fibonacci(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+num = int(input('请输入一个正整数: '))
+for i in range(1, num + 1):
+    print(fibonacci(i), end=' ')
+```
+
+
+
+**练习：使用递归，读取目录下的文件：**
+
+```python
+import os
+#通过递归调用一层层获取
+def getAllSub2(path, dirlist=[], filelist=[]):
+    flist = os.listdir(path)
+    for filename in flist:
+        subpath = os.path.join(path, filename)
+        if os.path.isdir(subpath):
+            dirlist.append(subpath)		# 如果是文件夹，添加到文件夹列表中
+            getAllSub2(subpath, dirlist, filelist)	# 向子文件内递归
+        if os.path.isfile(subpath):
+            filelist.append(subpath)	# 如果是文件，添加到文件列表中
+    return dirlist, filelist
+
+
+if __name__ == "__main__":
+    path = r'D:\笔记\Python'
+    Dirlist, Filelist = getAllSub2(path)
+    print(Dirlist)
+    print(Filelist)
+```
+
+
+
+## 7.匿名函数
+
+​	匿名函数是Python特有的一种形式，它无需使用函数名来标识函数，它的函数只能是单个表达式，用关键字lambda定义匿名函数，语法如下：
+
+```python
+lambda [arg1,[arg2,...argn]] : expression
+```
+
+需要注意的是：匿名函数只有一个表达式，功能比较单一，而且不能被其他程序使用.
+
+```python
+# 匿名函数
+ji = lambda x, y: x * y
+print(ji(5,5))
+```
+
+
+
+## 8.练习：
+
+​	通过函数来实现学生管理系统的功能，要求对该系统实现增删改查的功能，可操作的字段可以有学生的姓名、性别、年龄、手机号等，并需要根据提示菜单来完成增删改查。
+
+```python
+"""
+使用自定义函数，完成对程序的模块化
+学生信息包含：姓名、性别、手机号
+该系统具有的功能：添加、删除、修改、显示、退出系统
+设计思路：
+提示用户选择功操作
+获取用户选择的功能
+根据用户的选择，分别调用不同的函数
+"""
+# 新建一个列表，用来保存学生的所有信息
+stu_info = []
+# 功能菜单打印
+def print_menu():
+    print('=' * 30)
+    print('学生管理系统')
+    print('1.添加学生信息')
+    print('2.删除学生信息')
+    print('3.修改学生信息')
+    print('4.显示所有学生信息')
+    print('0.退出系统')
+    print('=' * 30)
+
+
+# 添加学生信息
+def add_stu_info():
+    # 提示并获取学生的姓名
+    new_name = input('请输入新学生的姓名:')
+    # 提示并获取学生的性别
+    new_sex = input('请输入新学生的性别:')
+    # 提示并获取学生的手机号
+    new_phone = input('请输入新学生的手机号码:')
+    new_info = dict()
+    new_info['name'] = new_name
+    new_info['sex'] = new_sex
+    new_info['phone'] = new_phone
+    stu_info.append(new_info)
+
+
+# 删除学生信息
+def del_stu_info(student):
+
+    del_num = int(input('请输入要删除的序号：')) - 1
+    del student[del_num]
+
+
+# 修改学生信息
+def modify_stu_info():
+    if len(stu_info) !=0:
+        stu_id = int(input('请输入要修改学生的序号:'))
+        new_name = input('请输入要修改学生的姓名:')
+        new_sex = input('请输入要修改学生的性别:(男/女)')
+        new_phone = input('请输入要修改学生的手机号码:')
+        stu_info[stu_id - 1]['name'] = new_name
+        stu_info[stu_id - 1]['sex'] = new_sex
+        stu_info[stu_id - 1]['phone'] = new_phone
+    else:
+        print('学生信息表为空')
+
+# 显示学生信息
+def show_stu_info():
+    print('学生的信息如下：')
+    print('=' * 30)
+    print('序号    姓名    性别    手机号码')
+    i = 1
+    for temp_info in stu_info:
+        print("%d    %s    %s    %s" %
+              (i, temp_info['name'], temp_info['sex'], temp_info['phone']))
+        i += 1
+
+# 主函数
+def main():
+    while True:
+        print_menu()  # 打印菜单
+        key = input("请输入功能对应的数字：")  # 获取用户输入的序号
+        if key == '1':  # 添加学生信息
+            add_stu_info()
+        elif key == '2':  # 删除学生信息
+            del_stu_info(stu_info)
+        elif key == '3':  # 修改学生信息
+            modify_stu_info()
+        elif key == '4':  # 查看所有学生的信息
+            show_stu_info()
+        elif key == '0':
+            quit_confirm = input('亲，真的要退出么？(Yes or No):')
+            if quit_confirm == 'Yes':
+                break  # 跳出循环
+            else:
+                print('输入有误，请重新输入')
+
+
+if __name__ == '__main__':
+    main()
+```
 
