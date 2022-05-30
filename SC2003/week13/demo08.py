@@ -1,9 +1,11 @@
 # author by Michealzou@126.com
 # 2022/5/16 17:03
 # 继承，单继承，多继承
+# 父类的私有属性，子类不能去继承
 # class 子类(父类)：
 class Amphibian:
-    type = "两栖动物"
+
+    __type = "两栖动物"
 
     def features(self):
         print("幼年用鳃呼吸。。。")
