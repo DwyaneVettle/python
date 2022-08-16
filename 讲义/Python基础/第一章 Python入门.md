@@ -12,13 +12,13 @@
 
 ​	Python 单词是“大蟒蛇”的意思。但是龟叔不是喜欢蟒蛇才起这个名字，而是正在追 剧：英国电视喜剧片《蒙提·派森的飞行马戏团》(Monty Python and the Flying Circus)。
 
-![](C:\Users\HP\Desktop\python.jpg)
+![](第一章 Python入门.assets/python.jpg)
 
 ​	Python和Java一样，需要安装一定的环境才能运行程序。不过我们可以通过官网提供的脚本interactive shell 来入门 Python。
 
-![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108202835791.png)
+![](第一章 Python入门.assets/image-20220108202835791.png)
 
-![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108202853044.png)
+![](第一章 Python入门.assets/image-20220108202853044.png)
 
 
 
@@ -92,7 +92,7 @@
 
 ### 	6.1.Python下载安装和配置
 
-​	我们需要进入官网下载（www.python.org/downloads/）Python解释器，并配置环境变量。在安装解释器时勾选"Add Python to enviroment variable"，这样就会将Python自动添加到环境变量Path中，我们可以在Windows环境下运行Python解释器。
+​	我们需要进入官网（www.python.org/downloads/）下载Python解释器，并配置环境变量。在安装解释器时勾选"Add Python to enviroment variable"，这样就会将Python自动添加到环境变量Path中，我们可以在Windows环境下运行Python解释器。
 
 ![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108215430848.png)
 

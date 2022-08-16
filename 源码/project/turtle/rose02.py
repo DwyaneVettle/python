@@ -83,7 +83,7 @@ t.color('red')
 t.pu()
 t.goto(-150,30)
 t.pd()
-t.write('I LOVE YOU',
+t.write('I LOVE YOU ',
 move=False, align='center',
 font=("Times", 18, "bold"))
 t.hideturtle()
