@@ -6,15 +6,10 @@
 		    3.完成数据：学生列表 __stu_list
 		    4.行为：获取列表 stu_list,
 		    5.添加学生方法 add_student
-		    -------------14:30-------------
 		    6.根据编号删除学生remove_student
-		    -------------14:36-------------
 		    7.根据编号修改学生update_student
-		    #16:00
 		    8.在界面视图类中，根据编号删除学生.
-		    17:05
 		    9.在界面视图类中，根据编号修改学生信息.
-		    17:30
 
 """
 
@@ -105,7 +100,8 @@ class StudentManagerController:
                     self.__stu_list[r], self.__stu_list[c] = self.__stu_list[c], self.__stu_list[r]
 
 
-"""  # 测试添加学生功能
+"""  
+# 测试添加学生功能
 
 
 manager = StudentManagerController()
