@@ -2,9 +2,19 @@
 
 
 
+2016年3月，AlphaGo Lee与围棋世界冠军、职业九段棋手李世石进行围棋人机大战，以4比1的总比分获胜；
+
+2017年5月，AlphaGo Master在中国乌镇围棋峰会上，与世界排名第一的围棋冠军柯洁对战，以3比0的比分获胜。
+
+<img src="第一章 Python入门.assets/image-20220905164958661.png" alt="image-20220905164958661" style="zoom:50%;" />
+
+<img src="第一章 Python入门.assets/image-20220905171242574.png" alt="image-20220905171242574" style="zoom:50%;" />
+
 ## 1.什么是Python
 
 ​	**人生苦短，快学Python。**
+
+<img src="第一章 Python入门.assets/image-20220905165658390.png" alt="image-20220905165658390" style="zoom: 67%;" />
 
 ​	Python由荷兰数学和计算机科学研究学会的[吉多·范罗苏姆](https://baike.baidu.com/item/吉多·范罗苏姆/328361) 于1990 年代初设计，作为一门叫做[ABC语言](https://baike.baidu.com/item/ABC语言/334996)的替代品。  Python提供了高效的高级[数据结构](https://baike.baidu.com/item/数据结构/1450)，还能简单有效地[面向对象](https://baike.baidu.com/item/面向对象/2262089)编程。Python语法和动态类型，以及[解释型语言](https://baike.baidu.com/item/解释型语言/8888952)的本质，使它成为多数平台上写[脚本](https://baike.baidu.com/item/脚本/1697005)和快速开发应用的编程语言，  随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、[大型项目](https://baike.baidu.com/item/大型项目/3986637)的开发。官网：www.python.org 
 
@@ -32,9 +42,11 @@
 
   杂的语法，而是关注任务本身。
 
+  <img src="第一章 Python入门.assets/image-20220907203734898.png" alt="image-20220907203734898" style="zoom:33%;" />
+
 - **免费、开源：**Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。
 
-- **可移植性：**由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台
+- **跨平台性：**由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台
 
 - **可扩展性、可扩充性**：如果需要一段关键代码运行得更快或者希望某些算法不公开，可以部分程序用C或C++编写，然后在Python程序中使用它们。
 
@@ -46,23 +58,24 @@
 
 
 
+<img src="第一章 Python入门.assets/image-20220907203719870.png" alt="image-20220907203719870" style="zoom:33%;" />
+
 ## 3.Python的应用领域
 
 ​	Python作为一种解释型脚本语言，可以应用的领域有很多，可以概括为以下几个：
 
-1. Web和Internet开发；
+1. Web和Internet开发：如豆瓣、知乎、YouTube等；
+2. 爬虫：模仿人去网站获取海量数据；
+3. 科学计算和统计：使用数据分析，从数据中获取有用信息；
+4. 人工智能；
+5. 桌面界面开发；
+6. 软件后端开发；
+7. 游戏开发；
+8. 机器学习；
+9. 自动化测试和运维；
+10. 办公自动化；
 
-2. 科学计算和统计；
-
-3. 人工智能；
-
-4. 桌面界面开发；
-
-5. 软件后端开发；
-
-6. 游戏开发
-
-   。。。。。
+。。。。。
 
 
 
@@ -96,7 +109,7 @@
 
 ![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108215430848.png)
 
-![image-20220109125358901](第一章 Python入门.assets/image-20220109125358901.png)
+![image-20220906105733899](第一章 Python入门.assets/image-20220906105733899.png)
 
 ![image-20220109125538439](第一章 Python入门.assets/image-20220109125538439.png)
 
@@ -275,6 +288,14 @@ t.done()                    # 停止画笔绘制，窗体不关闭
 
 
 
+## 9.Python程序执行过程分析
+
+![image-20220907203013386](第一章 Python入门.assets/image-20220907203013386.png)
+
+Python虽然是解释型语言，但为了提高运行效率，使用了一种编译的方法，编译之后得到pyc文件，存储了字节码（特定的Python表现形式，不是机器码）。
+
+
+
 
 
 **本章作业：**
@@ -286,4 +307,14 @@ t.done()                    # 停止画笔绘制，窗体不关闭
 3.使用海归绘图，画出4个正方形：
 
 ![image-20220110115852662](第一章 Python入门.assets/image-20220110115852662.png)
+
+
+
+## Python学习方法
+
+- 弱语法，重规则
+- 重思想，重设计
+- 是技术，更艺术
+- 项目化，实战化
+- what-->why-->-->where-->how
 
