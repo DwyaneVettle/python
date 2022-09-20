@@ -379,6 +379,8 @@ print(str1 + str2)
 
 ```python
 str.replace(old, new, count = None)
+# count为替换次数
+# 注意： 替换次数如果查出子串出现次数，则替换次数为该子串出现次数
 ```
 
 ```python
@@ -395,12 +397,34 @@ str4 = str3.replace('他', '我')
 print(str4)
 ```
 
+```python
+# replace() --- 替换    需求：把and换成he
+myStr = 'hello world and Python and java and php'
+new_str = myStr.replace('and', 'he')
+print(myStr)   # hello world and Python and java and php
+print(new_str)  # hello world he Python he java he php
+# 原字符串调用了replace函数后，原有字符串中的数据并没做任何修改，修改后的数据是replace函数电动的返回值
+# 说明：replace函数有返回值，返回值是修改后的字符串
+# 字符串是不可变数据类型，数据是否可以改变划分为：可变类型 和 不可变类型
+ 
+ 
+new_str = myStr.replace('and', 'he', 1)
+print(new_str)  # hello world he Python and java and php
+ 
+new_str = myStr.replace('and', 'he', 10)
+print(new_str)  # hello world he Python he java he php
+# 替换次数如果超出了子串出现的次数，表示替换所有这个子串
+```
+
+
+
 - **字符串分割**
 
   字符串的分割采用split()方法，语法格式为：
 
 ```python
 str.split(sep = None, maxsplit = -1)
+# 注意： num表示的是分割字符出现的次数，即将来返回数据个数为num+1个
 ```
 
 ```python
@@ -411,6 +435,18 @@ print(str6.split(','))
 str7 = '人生苦短，快用Python'
 print(str7.split('苦'))
 ```
+
+```python
+# split() --- 分割 --- 返回一个列表，丢失分割字符
+myStr = 'hello world and Python and java and php'
+list1 = myStr.split('and')
+print(list1)  # ['hello world ', ' Python ', ' java ', ' php']
+ 
+list1 = myStr.split('and', 2)
+print(list1)  # ['hello world ', ' Python ', ' java and php']
+```
+
+注意： 如果分割字符是原有字符串中的子串，分割后则丢失该子串。
 
 - **去除字符串两侧的空格**
 
@@ -427,7 +463,70 @@ str9 = '%%hello%%'
 print(str9.strip('%'))
 ```
 
-#### 5.4.3.字符串的索引和切片
+- **合并字符串，即将多个字符串合并为一个新的字符串**
+
+语法格式为：
+
+```python
+字符或字串.join(字符串组成的序列)
+```
+
+```python
+# join() --- 合并列表里面的字符串数据为一个大字符串
+myList = ['aa', 'bb', 'cc']
+ 
+# 需求：最终结果为： aa...bb...cc
+new_list = '...'.join(myList)
+print(new_list)  # aa...bb...cc
+ 
+new_list = '/'.join(myList)
+print(new_list)  # aa/bb/cc
+```
+
+
+
+#### 5.4.3.字符串拼接问题
+
+**1.str.join(str)和str+str的区别：**
+
+当字符串连接数少时，+号的连续效率比join高，当字符串连接数多时，join的连接效率比+号高。
+
+**2.三种拼接方法**
+
+方法一：直接通过+号连接
+
+```python
+website  =  'python'  +  'tab'  +  '.com'
+```
+
+方法二：join()方法连接
+
+```python
+listStr  =  [ 'python' ,  'tab' ,  '.com' ] 
+website  =  ''.join(listStr)
+```
+
+方法三：%替换
+
+```python
+website  =  '%s%s%s'  %  ( 'python' ,  'tab' ,  '.com' )
+```
+
+**三种拼接方法的区别：**
+
+**方法1**，使用简单直接，但是网上不少人说这种方法效率低
+
+之所以说python 中使用 + 进行字符串连接的操作效率低下，是因为python中字符串是不可变的类型，使用 + 连接两个字符串时会生成一个新的字符串，生成新的字符串就需要重新申请内存，当连续相加的字符串很多时(a+b+c+d+e+f+...) ，效率低下就是必然的了；
+
+**方法2**，使用略复杂，但对多个字符进行连接时效率高，只会有一次内存的申请。而且如果是对list的字符进行连接的时候，这种方法必须是首选；
+
+**方法3，**字符串格式化，这种方法非常常用，本人也推荐使用该方法。
+
+
+
+
+
+#### 5.4.4.字符串的索引和切片
 
 - **索引**
 
