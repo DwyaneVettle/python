@@ -192,7 +192,7 @@ print(MAX_SCORE)								# 120
 
 ## 5.数据类型
 
-​	Python中常见的数据类型有整型(int)、浮点型(float)、布尔型(boot)、字符串型(str)。 
+​	Python中常见的数据类型有整型(int)、浮点型(float)、布尔型(bool)、字符串型(str)。 
 
 
 
@@ -378,7 +378,7 @@ print(str1 + str2)
   字符串的替换可以使用replace()方法来完成，语法格式为：
 
 ```python
-str.repalce(old, new, count = None)
+str.replace(old, new, count = None)
 ```
 
 ```python
@@ -405,7 +405,7 @@ str.split(sep = None, maxsplit = -1)
 
 ```python
 str5 = '1 2 3 4 5'
-print(str5.split())  # 默认分隔空格
+print(str5.split())  # 默认返回一个列表
 str6 = 'a,b,c,d,e'
 print(str6.split(','))
 str7 = '人生苦短，快用Python'
