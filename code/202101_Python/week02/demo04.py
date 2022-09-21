@@ -32,3 +32,6 @@ a, b = 100, 200
 a, b = b, a
 print(a)
 print(b)
+
+# 常量-不能改变值，常量名全部大写
+MAX_SCORE = 100
