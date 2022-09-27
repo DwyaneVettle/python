@@ -331,7 +331,7 @@ print('我叫%s,今年%d岁了' % (name, age))
   format()方法同样可以对字符串格式化输出，与占位符%不同的是，使用format()不需要关注变量的类型，其格式如下：
 
 ```python
-<字符串>.format(<参数列表>)
+<字符串{}>.format(<参数列表>)
 ```
 
 ```python
@@ -378,7 +378,7 @@ print(str1 + str2)
   字符串的替换可以使用replace()方法来完成，语法格式为：
 
 ```python
-str.replace(old, new, count = None)
+str.replace(old, new, count)
 # count为替换次数
 # 注意： 替换次数如果查出子串出现次数，则替换次数为该子串出现次数
 ```
@@ -544,7 +544,7 @@ print(str1[-2])
 
 ​	需要注意的是，索引值不能越界，否则会报越界异常。
 
-- **切片**
+- **切片**:都是从左至右
 
   切片用于截取目标对象中的一部分，其语法格式为：
 
@@ -555,9 +555,18 @@ print(str1[-2])
 ​	切片的默认步长为1，需要注意的是切片获取的区间属于左闭右开型，即包含起始位，但不包含结束位。
 
 ```python
-str1 = 'Python'
-print(str1[0:4:1])
-print(str1[0:4:2])
+# 切片：切片用于截取目标对象中的一部分-切片只正序切片，无论传递下标是整数，还是负数，切片都是从左至右
+"""
+    语法：str[start:end:step]-包含start,不包含end
+    start-开始切片开始的下标，正数表示正序，反之倒叙
+    end-表示切片结束的下标
+    step-切片的步长,默认步长为1，可以不传递,传递步长包含end个数
+"""
+str12 = 'python'  # th
+print(str12[2:4])  # 正序
+print("-----------")
+print(str12[-4:-2])  # 倒叙
+print(str12[1:5:3])  # y o
 ```
 
 
@@ -621,6 +630,21 @@ print(float(b), type(float(b)))
 # print(float(s3), type(float(s3)))
 ```
 
+bool()：将其他类型转换成boolean类型：
+
+```python
+# bool() - 1,0
+a = 1
+b = bool(a)
+print(b)  # True
+print(type(b))  # <class 'bool'>
+
+c = 0
+print(bool(c))  # False
+d = 3
+print(bool(d))  # True
+```
+
 
 
 ### 5.6.空值对象_None
@@ -642,7 +666,7 @@ sex = None
 
 ### 5.7.复数
 
-Python中是有复数存在的，复数由实部和虚部组成的数字，其中虚部是以j或J结尾。如1j，1+1j，1-1J。复数在人工只能的一些公式中存在使用。在开发中很少用到，此处不再赘述。
+​	Python中是有复数存在的，复数由实部和虚部组成的数字，其中虚部是以j或J结尾。如1j，1+1j，1-1J。复数在人工只能的一些公式中存在使用。在开发中很少用到，此处不再赘述。
 
 
 
@@ -753,11 +777,11 @@ print(u)
 
 ​	Python的比较运算符和其他语言类似，都是对变量或其他表达式的结果进行大小、真假的比较。
 
-| 定义            | 比较符号          |
-| --------------- | ----------------- |
-| 一般比较符      | <、>、<=、>=、！= |
-| 对象value的比较 | ==                |
-| 对象id的比较    | is、is not        |
+| 定义            | 比较符号         |
+| --------------- | ---------------- |
+| 一般比较符      | <、>、<=、>=、!= |
+| 对象value的比较 | ==               |
+| 对象id的比较    | is、is not       |
 
 ```python
 # 比较运算符,比较的结果为布尔值
@@ -779,24 +803,42 @@ print(x == y)  # True --a与b的value相等
 print(x is y)  # Ture --a与b的值也相等
 ```
 
+```python
+"""
+    is is not 和 == !=的区别
+    is ,is not比较的是对象内存的引用 ——>  id值 
+    ==,!=比较的是对象的值
+    如果比较的是不可变的类型（数字、字符串、元组），is和==是没有区别的
+    如果比较的是可变类型（列表、字典、集合），就有区别
+    is在一般时候比==的效率要高一些，在变量和None比较时，一般用is,is not
+"""
+a = 10
+b = 10
+print(a is b, a == b)  # True True
+
+c = ["aa", "bb"]
+d = ["aa", "bb"]
+print(c is d, c == d)  # False True
+```
+
 
 
 ### 7.4.布尔运算符
 
 ​	布尔运算符是对布尔值之间的运算，布尔运算符号有：and、or、not、in、not in。它们的运算关系如图所示：
 
-| 运算符 | 运算数 | 运算数 | 运算结果 | 备注                                 |
-| ------ | ------ | ------ | -------- | ------------------------------------ |
-| and    | Ture   | Ture   | Ture     | 当两个运算数都为True时，结果才为True |
-|        | True   | False  | False    |                                      |
-|        | False  | True   | False    |                                      |
-|        | False  | False  | False    |                                      |
-| or     | True   | True   | True     | 只要有一个运算符为True，结果就为True |
-|        | True   | False  | True     |                                      |
-|        | False  | True   | Ture     |                                      |
-|        | False  | False  | False    |                                      |
-| not    | True   | True   | False    | 如果运算数为True，运算结果为False    |
-|        | False  | False  | True     | 如果运算数为False，运算结果为True    |
+| 运算符 | 运算数 | 运算数 | 运算结果 | 备注                                  |
+| ------ | ------ | ------ | -------- | ------------------------------------- |
+| and    | Ture   | Ture   | Ture     | 当两个 运算数都为True时，结果才为True |
+|        | True   | False  | False    |                                       |
+|        | False  | True   | False    |                                       |
+|        | False  | False  | False    |                                       |
+| or     | True   | True   | True     | 只要有一个运算符为True，结果就为True  |
+|        | True   | False  | True     |                                       |
+|        | False  | True   | Ture     |                                       |
+|        | False  | False  | False    |                                       |
+| not    | True   | True   | False    | 如果运算数为True，运算结果为False     |
+|        | False  | False  | True     | 如果运算数为False，运算结果为True     |
 
 ```python
 # and 

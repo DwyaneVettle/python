@@ -59,6 +59,8 @@ print(bool(set()))  # 空集合
 ```python
 if 条件表达式:
     条件执行体
+    
+print("---")
 ```
 
 <img src="第三章 Python流程控制.assets/image-20220118212627821.png" alt="image-20220118212627821" style="zoom: 67%;" />
