@@ -38,7 +38,7 @@ lst = ['hello', 'world']
 lst = list(['hello', 'world'])
 ```
 
-
+<img src="第四章 Python列表.assets/image-20221011112053052.png" alt="image-20221011112053052" style="zoom:50%;" />
 
 ## 3.列表的特点
 
