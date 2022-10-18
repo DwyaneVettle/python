@@ -4,6 +4,10 @@
 
 ## 1.列表
 
+​	列表：由一系列变量组成的可变序列容器。
+
+​	字符串：由一系列不可变字符组成的不可变容器。	
+
 ​	之前我们所学的变量只能存储一个元素，而列表是一个容器，可以存储N个元素，程序可以方便的对这些数据进行整体操作。它相当于Java，PHP等语言中的数组。如下图为列表示意图：
 
 <img src="第四章 Python列表.assets/image-20220120210825956.png" alt="image-20220120210825956" style="zoom:67%;" />
@@ -57,6 +61,72 @@ print(lst)
 print(lst[0], lst[-3])
 ```
 
+```python
+"""
+    列表
+"""
+# 1. 创建列表
+# 空
+list01 = []
+list01 = list()
+
+# 默认值
+list02 = ["悟空", 100, True]
+list02 = list("我是齐天大圣")
+
+# 2. 获取元素
+# 索引
+print(list02[2])  # 齐
+# 切片
+print(list02[-4:])  # ['齐', '天', '大', '圣']
+
+# 3. 添加元素
+# 追加(在末尾添加)
+list02.append("八戒")
+# 插入(在指定位置添加)
+list02.insert(1, True)  # 在索引为１(第二个)的位置添加True
+
+# 4. 删除元素
+# 根据元素删除
+list02.remove("是")
+# 根据位置删除
+
+del list02[0]
+print(list02)
+
+# 5.定位元素，目的：可以增删改查元素。
+# 切片
+del list02[1:3]
+print(list02)
+# [True, '大', '圣', '八戒']
+# [True, 'a', 'b', '八戒']
+list02[1:3] = ["a", "b"]  # 改变对应元素
+# [True,'八戒']
+# 可以改一个也可以该多个
+# list02[1:3] = [1,2,3,4,5]
+# list02[1:3] = []
+print(list02)
+
+# 遍历列表
+# 获取列表中所有元素
+for item in list02:
+    print(item)
+
+# 倒序获取所有元素
+# 不建议
+# list02[::-1] 通过切片拿元素，会重新创建新列表.
+# for item in list02[::-1]:
+#     print(item)
+
+# 3  2  1  0
+for i in range(len(list02) - 1, -1, -1):
+    print(list02[i])
+
+# -1  -2  -3  -4
+for i in range(-1, -len(list02) - 1, -1):
+    print(list02[i])
+```
+
 
 
 ## 4.列表的查询操作
@@ -103,6 +173,29 @@ print(lst[:6:2])  # start默认从第一个元素开始
 print(lst[1::2])  # stop默认为最后一个元素
 # step为负
 print(lst[::-1])
+```
+
+```python
+a = [1,2,3,4,5,6,7,8,9]
+# 取部分元素：
+a [ 0 : 3 ] ———— 取出列表中 0 - 2 的元素 组成一个新列表
+a = [ 1 , 2 , 3 ] （左闭右开原则）
+a [ 2 : ] ———— 取列表索引值为2及以后的元素 组成一个新列表
+a = [ 4 , 5 , 6 , 7 , 8 , 9 ]
+a [ : 3 ] ———— 取列表从开始到索引值为3之前的元素 组成一个新列表
+a = [ 1 , 2 , 3 ]
+
+# 间隔取元素：
+a [ 0 : 3 : 2 ] ———— 在范围里每隔一个取一个元素 组成一个新列表
+a = [ 1 , 3 ]
+
+# 反取元素：
+a [ 3 : 0 : -1 ] ———— 逆序取元素 组成一个新列表
+a= [ 4, 3 , 2 ] （当反取元素时 应范围反取 且不步长为负数 否则将生成一个空列表） （左闭右开原则）
+
+# 选取整个列表：
+a [ : ] ———— 取出所有元素
+a = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ]
 ```
 
 
@@ -175,7 +268,7 @@ print(list01)
 | pop()         | 1.删除指定索引位置上的元素；2.指定位置不存在则抛出IndexError;3.不指定索引，删除列表最后一个元素 |
 | 切片          | 一次至少删除一个元素                                         |
 | clear()       | 清空列表                                                     |
-| del()         | 删除列表                                                     |
+| del           | 删除列表                                                     |
 
 ```python
 # 删除列表
@@ -222,7 +315,81 @@ print(lst)
 
 
 
-## 9.列表的排序
+- **内建函数**
+  - len()：返回序列的长度
+  - max()：返回序列中的最大值
+  - min()：返回序列中的最小值
+  - sum()：返回序列所有元素的和（必须为数值）
+
+## 9.练习
+
+1.在控制台中录入，西游记中你喜欢的人物，当输入空字符串，打印(一行一个)所有人物
+
+```python
+"""
+    练习１：
+    在控制台中录入，西游记中你喜欢的人物.
+    输入空字符串，打印(一行一个)所有人物.
+"""
+
+list_person = []
+# 录入过程
+while True:
+    str_input = input("输入在西游记中喜欢的人物:")
+    if str_input == "":
+        break
+    list_person.append(str_input)
+
+# 输出过程
+for item in list_person:
+    print(item)
+```
+
+
+
+2.在控制台中录入，所有学生成绩，输入空字符串，打印(一行一个)所有成绩，并打印最高分,打印最低分,打印平均分。
+
+```python
+list_score = []
+# 录入过程
+while True:
+    str_score = input("请输入成绩：")
+    if str_score == "":
+        break
+list_score.append(int(str_score))  # 输出过程
+for item in list_score:
+    print(item)
+
+print("最高分：" + str(max(list_score)))
+print("最低分：" + str(min(list_score)))
+print("平均分：" + str(sum(list_score) / len(list_score)))
+```
+
+
+
+3.在控制台中录入，所有学生姓名，如果姓名重复，则提示"姓名已经存在",不添加到列表中，如果录入空字符串，则倒叙打印所有学生。
+
+```python
+list_name = []
+while True:
+    name = input("请输入姓名:")
+    if name == "":
+        break
+    # 判断变量在列表中是否存在
+    if name not in list_name:
+        list_name.append(name)
+    else:
+        print("姓名已经存在")
+
+# -1  -2  -3
+# 2  1   0
+for item in range(-1, -len(list_name) - 1, -1):
+    print(list_name[item])
+```
+
+
+
+## 10.列表的排序
 
 ​	列表常见的排序方式有以下两种：
 
@@ -249,7 +416,7 @@ print(desc_lst)
 
 
 
-## 10.列表生成式
+## 11.列表生成式
 
 ​	列表生成式就是生成列表的公式，其语法格式为：
 
@@ -272,13 +439,27 @@ lst2 = [i*2 for i in range(1, 6)]
 print(lst2)
 ```
 
-## 11.深拷贝和浅拷贝
+## 12.深拷贝和浅拷贝
 
 **浅拷贝**：复制过程中，只复制一层变量， 不会深层变量绑定的对象的复制过程；
 
 **深拷贝**：复制整个依赖过程。
 
+python中默认为浅拷贝，因为深拷贝更耗内存。
+
 ```python
+list01 = ["张无忌","赵敏"]
+list02 = list01
+# 修改的是列表第一个元素
+list01[0] = "无忌"
+print(list02[0])
+
+list01 = ["张无忌","赵敏"]
+list02 = list01
+# 修改的是list01变量
+list01 = ["无忌"]
+print(list02[0])#张无忌
+
 list01 = [800,1000]
 # 通过切片获取元素，会创建新列表.
 list02 = list01[:]
@@ -318,3 +499,72 @@ print(list02[1][0])#?
 ![列表内存图06](第四章 Python列表.assets/列表内存图06.jpg)
 
 ![列表内存图07](第四章 Python列表.assets/列表内存图07-1649728516044.jpg)
+
+
+
+- **内存图练习**
+
+1.将列表[54,25,12,42,35,17]中，大于30的数字存入另外一个列表，并画出内存图。
+
+```python
+# 练习１：
+list01 = [54, 25, 12, 42, 35, 17]
+list02 = []
+for item in list01:
+    if item > 30:
+        list02.append(item)
+print(list02)
+```
+
+![image-20221017222807116](第四章 Python列表.assets/image-20221017222807116.png)
+
+2.在控制台中录入５个数字，打印最大值（不使用max）。
+
+```python
+# 练习2:
+# 假设的最大值
+max_value = 0
+for item in range(5):
+    number = int(input("请输入第%d个数字:" % (item + 1)))
+    if max_value < number:
+        max_value = number
+print(max_value)
+```
+
+
+
+3.在列表中[54, 25, 12, 42, 35, 17]，选出最大值(不使用max)。
+
+```python
+list01 = [54, 25, 12, 42, 100, 17]
+# 假设第一个是最大的
+max_value = list01[0]
+# 与后面（从第二个开始）元素进行比较
+# 1 2 3 4 5
+for i in range(1, len(list01)):
+    if max_value < list01[i]:
+        # 如果发现更大的，则替换假设的.
+        max_value = list01[i]
+
+print(max_value)
+```
+
+
+
+4.在列表中[9, 25, 12, 8]，删除大于10的数字。
+
+```python
+list01 = [9, 25, 12, 8]
+# for item in list01:
+#     if item > 10:
+#         list01.remove(item)
+
+#3 2  1 0
+#-1 -2 -3 -4
+for i in range(len(list01)-1,-1,-1):
+    if list01[i] > 10:
+        list01.remove(list01[i])
+print(list01)
+```
+
+![image-20221017223846566](第四章 Python列表.assets/image-20221017223846566.png)

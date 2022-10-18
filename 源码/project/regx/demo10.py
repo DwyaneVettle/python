@@ -8,6 +8,6 @@ print(result.group())  # use python
 result_two = re.search(r"use\s.*?",words)
 print(result_two.group())  # use
 # 贪婪匹配
-print(re.search(r"use\s.+",words))  # <re.Match object; span=(15, 25), match='use python'>
+print(re.search(r"use\s.+",words))  # <regx.Match object; span=(15, 25), match='use python'>
 # 非贪婪匹配
-print(re.search(r"use\s.+?",words))  # <re.Match object; span=(15, 20), match='use p'>
+print(re.search(r"use\s.+?",words))  # <regx.Match object; span=(15, 20), match='use p'>

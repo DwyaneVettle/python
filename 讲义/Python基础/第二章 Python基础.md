@@ -569,7 +569,20 @@ print(str12[-4:-2])  # 倒叙
 print(str12[1:5:3])  # y o
 ```
 
+- **编码转换**
 
+  - ord()：字转数
+  - chr()：数转字
+
+  ```python
+  num01 = ord('a')
+  print(num01)
+  
+  str01 = chr(97)
+  print(str01)
+  ```
+
+  
 
 ### 5.5.数据类型的转换
 

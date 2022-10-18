@@ -4,7 +4,7 @@
 import re
 word = "Hello Python"
 match_result = re.search(r"\wth\w",word)
-print(match_result)  # <re.Match object; span=(7, 11), match='ytho'>
+print(match_result)  # <regx.Match object; span=(7, 11), match='ytho'>
 print(match_result.group())  # 匹配对象
 print(match_result.start())  # 起始位置
 print(match_result.end())  # 结束位置
