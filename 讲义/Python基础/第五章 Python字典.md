@@ -1,8 +1,8 @@
 #  第五章 Python字典与元组
 
+## 1.字典
 
-
-## 1.什么是字典
+### 1.1.什么是字典
 
 ​	**字典**是Python内置数据结构之一，与列表一样是一个可变序列。它以键值对(key-value)的方式储存，是一个无序的序列。格式如下：
 
@@ -15,9 +15,11 @@ dictionary = {'key1':value1, 'key2':value2, 'key3':value3}
 
 ​	**字典的实现原理和查字典类似，查字典是根据部首或拼音查找对应页码，Python中字典是根据key查找value所在的位置。**
 
+<img src="第五章 Python字典.assets/image-20220121205913624.png" alt="image-20220121205913624" style="zoom:50%;" />
 
+![image-20221031203836986](第五章 Python字典.assets/image-20221031203836986.png)
 
-## 2.创建字典
+### 1.2.创建字典
 
 ​	创建字典和创建列表一样，有两种方式：
 
@@ -45,7 +47,7 @@ print(d)
 
 
 
-## 3.字典的查询
+### 1.3.字典的查询
 
 ​	获取字典元素的方式有两种：
 
@@ -74,7 +76,7 @@ print(gdp.get('广东', 8000))  # 8000是广东不存在是提供的默认值
 
 
 
-## 4.字典元素的判断和元素删除
+### 1.4.字典元素的判断和元素删除
 
 ​	字典key的判断可以用in和not in来判断。
 
@@ -101,7 +103,7 @@ print(gdp)
 
 
 
-## 5.新增、修改字典元素
+### 1.5.新增、修改字典元素
 
 ​	新增字典元素只需要将字典中增减对应键值对就可以了.
 
@@ -117,7 +119,7 @@ print(gdp)
 
 
 
-## 6.字典的视图操作
+### 1.6.字典的视图操作
 
 ​	获取字典视图的三个方法：
 
@@ -141,7 +143,7 @@ print(list(items))  # 元组
 
 
 
-## 7.字典元素的遍历
+### 1.7.字典元素的遍历
 
 ​	遍历的方式如下：
 
@@ -159,7 +161,56 @@ for item in gdp:
 
 
 
-## 8.字典的特点
+```python
+# 1. 创建
+# 空
+dict01 = {}
+dict01 = dict()
+# 默认值
+dict01 = {"wj":100,"zm":80,"zr":90}
+dict01 = dict([("a","b"),("c","d")])
+print(dict01)
+
+# 2.　查找元素(根据ｋｅｙ查找ｖａｌｕｅ)
+print(dict01["a"])
+# 如果ｋｅｙ不存在，查找时会错误.
+if "xtq" in dict01:# 如果存在key
+    print(dict01["qtx"])
+
+# 3.　修改元素(之前存在ｋｅｙ)
+dict01["a"] = "BB"
+
+# 4. 添加(之前不存在ｋｅｙ)
+dict01["e"] = "f"
+
+# 5. 删除
+del dict01["a"]
+
+print(dict01)
+# 6. 遍历（获取字典中所有元素）
+
+# 遍历字典，获取key
+for key in dict01:
+    print(key)
+    print(dict01[key])
+
+# 遍历字典，获取value
+for value in dict01.values():
+    print(value)
+
+# 遍历字典，获取键值对key value(元组).
+# for item in dict01.items():
+#     print(item[0])
+#     print(item[1])
+
+for k,v in dict01.items():
+    print(k)
+    print(v)
+```
+
+
+
+### 1.8.字典的特点
 
 ​	字典的特点有如下几个：
 
@@ -184,7 +235,7 @@ print(student)  # TypeError: unhashable type: 'list'
 
 
 
-## 9.使用字典生成式
+### 1.9.使用字典生成式
 
 ​	在Python中也可以使用内置函数zip()来生成字典。它用于将可迭代对象作为参数，将对象中对应的参数打包成一个元组，然后返回这些由元组组成的列表。
 
@@ -201,15 +252,214 @@ for item,price表示遍历的变量
 zip(items,prices)表示打包的列表对象。
 ```
 
+```python
+"""
+    字典推导式
+"""
+# 1 2 3 4 ... 10 -> 平方
+dict01 = {}
+for item in range(1, 11):
+    dict01[item] = item ** 2
+print(dict01)
+# 推导式:
+dict02 = {item: item ** 2
+          for item in range(1, 11)}
+print(dict02)
+
+# 只记录大于５的数字
+dict01 = {}
+for item in range(1, 11):
+    if item >5:
+        dict01[item] = item ** 2
+
+print(dict01)
+
+dict02 = {item: item ** 2
+          for item in range(1, 11) if item >5}
+print(dict02)
+```
 
 
-## 10.元组-tuple	
+
+### 1.10.练习
+
+1.在控制台中循环录入商品信息(名称,单价)，如果名称输入空字符,则停止录入，将所有信息逐行打印出来。
+
+```python
+dict_commodity_info = {}
+while True:
+    name = input("请输入商品名称：")
+    if name == "":
+        break
+    price = int(input("请输入商品单价："))
+    dict_commodity_info[name] = price
+
+for key,value in dict_commodity_info.items():
+    print("%s商品单价是%d"%(key,value))
+```
+
+
+
+2.在控制台中循环录入学生信息(姓名,年龄,成绩,性别)，如果名称输入空字符, 则停止录入，将所有信息逐行打印出来。
+
+```python
+"""
+# 字典内嵌列表:
+{
+    "张无忌":[28,100,"男"],
+}
+"""
+dict_student_info = {}
+while True:
+    name = input("请输入姓名：")
+    if name == "":
+        break
+    age = int(input("请输入年龄："))
+    score = int(input("请输入成绩："))
+    sex = input("请输入性别：")
+    dict_student_info[name] = [age, score, sex]
+
+# 打印所有学生信息
+for name,list_info in dict_student_info.items():
+    print("%s的年龄是%d,成绩是%d,性别是%s"%(name,list_info[0],list_info[1],list_info[2]))
+```
+
+```python
+"""
+# 字典内嵌字典:
+{
+    "张无忌":{"age":28,"score":100,"sex":"男"},
+}
+"""
+dict_student_info = {}
+while True:
+    name = input("请输入姓名：")
+    if name == "":
+        break
+    age = int(input("请输入年龄："))
+    score = int(input("请输入成绩："))
+    sex = input("请输入性别：")
+    dict_student_info[name] = {"age": age, "score": score, "sex": sex}
+
+for name, dict_info in dict_student_info.items():
+    print("%s的年龄是%d,成绩是%d,性别是%s" %
+          (name, dict_info["age"],
+           dict_info["score"], dict_info["sex"]))
+```
+
+
+
+```python
+"""
+# 列表内嵌字典:
+[
+    {"name":"张无忌","age":28,"score":100,"sex":"男"},
+]
+"""
+list_student_info = []
+while True:
+    name = input("请输入姓名：")
+    if name == "":
+        break
+    age = int(input("请输入年龄："))
+    score = int(input("请输入成绩："))
+    sex = input("请输入性别：")
+    dict_info = {"name": name, "age": age, "score": score, "sex": sex}
+    list_student_info.append(dict_info)
+
+for dict_info in list_student_info:
+    print("%s的年龄是%d,成绩是%d,性别是%s" % (dict_info["name"], dict_info["age"], dict_info["score"], dict_info["sex"]))
+# 获取第一个学生信息
+dict_info = list_student_info[0]
+print("第一个录入的是：%s,年龄是%d,成绩是%d,性别是%s" % (dict_info["name"], dict_info["age"], dict_info["score"], dict_info["sex"]))
+
+```
+
+
+
+- **列表和字典如何选择？**
+
+选择策略：根据具体需求，结合优缺点，综合考虑(两害相权取其轻).
+    字典：
+        优点：根据键获取值，读取速度快；
+        　　　代码可读性相对列表更高(根据键获取与根据索引获取).
+        缺点：内存占用大；
+        　　　获取值只能根据键,不灵活.
+    列表：
+        优点：根据索引/切片，获取元素更灵活.
+                    相比字典占内存更小。
+        缺点：通过索引获取，如果信息较多，可读性不高.
+
+练习:在控制台中录入多个人的多个喜好,输入空字符停止。
+
+```python
+"""
+练习:在控制台中录入多个人的多个喜好,输入空字符停止.
+例如:请输入姓名：
+    请输入第1个喜好：
+    请输入第2个喜好：
+    ...
+    请输入姓名：
+    ...
+   最后在控制台打印所有人的所有喜好.
+[
+    {“无忌”:[赵敏,周芷若,小赵]}
+]
+
+list_person_bobby = []
+while True:
+    name = input("请输入姓名：")
+    if name == "":
+        break
+    dict_person = {name:[]}
+    list_person_bobby.append(dict_person) 
+    while True:
+        bobby = input("请输入喜好：")
+        if bobby == "":
+            break
+        dict_person[name].append(bobby)
+"""
+
+"""
+{
+    “无忌”:[赵敏,周芷若,小赵]
+}
+"""
+dict_person_bobby = {}
+while True:
+    name = input("请输入姓名：")
+    if name == "":
+        break
+    dict_person_bobby[name] = []
+    while True:
+        bobby = input("请输入喜好：")
+        if bobby == "":
+            break
+        dict_person_bobby[name].append(bobby)
+
+for name, list_bobby in dict_person_bobby.items():
+    print("%s喜欢：" % name)
+    for item in list_bobby:
+        print(item)
+```
+
+作业：
+
+1.存储全国各个城市的景区与美食(不用录入),在控制台中显示出来.
+  　北京：
+        景区：故宫,天安门,天坛.
+        美食: 烤鸭,炸酱面,豆汁,卤煮.
+    四川:
+        景区：九寨沟,峨眉山,春熙路．
+        美食: 火锅,串串香,兔头
+
+## 2元组-tuple	
 
 ​	元组是由一系列变量组成的不可变的序列容器。不可变是指一旦创建，不可以再添加/删除/修改元素。
 
 
 
-### 10.1.元组的基本操作
+### 2.1.元组的基本操作
 
 - **创建元组**
 
@@ -299,7 +549,7 @@ zip(items,prices)表示打包的列表对象。
 
 
 
-### 10.2.元组的作用
+### 2.2.元组的作用
 
 1. 元组与列表都可以存储一系列变量，由于列表会预留内存空间，所以可以增加元素。
 2. 元组会按需分配内存，所以如果变量数量固定，建议使用元组，因为占用空间更小。
@@ -309,7 +559,7 @@ zip(items,prices)表示打包的列表对象。
 
 
 
-### 10.3.练习
+### 2.3.练习
 
 ```python
 """
