@@ -57,27 +57,95 @@ def m_weather(today, temp,air):
 m_weather("4月20号", "20℃", "优")
 ```
 
+```python
+"""
+    自定义函数
+"""
+
+"""
+print("直拳")
+print("摆拳")
+print("肘击")
+print("临门一脚")
+#...............
+print("直拳")
+print("摆拳")
+print("肘击")
+print("临门一脚")
+#...............
+print("直拳")
+print("摆拳")
+print("肘击")
+print("临门一脚")
+"""
+
+
+# 定义（做功能）函数
+def attack():
+    """
+        单次攻击　
+    """
+    print("临门一脚")
+    print("直拳")
+    print("摆拳")
+    print("肘击")
+
+
+# 形式参数
+def attack_repeat(count):
+    """
+        重复攻击
+    :param count: 攻击次数,int类型
+    """
+    for i in range(count):
+        print("临门一脚")
+        print("直拳")
+        print("摆拳")
+        print("肘击")
+
+
+# 调用函数
+attack()
+# ...............
+# 调用函数
+attack()
+# ...............
+# 调用函数
+attack()
+print("--------------")
+# 调用函数
+# 实际参数
+attack_repeat(2)
+```
+
 
 
 说明：**return后没有数据相当于None，函数体没有return，相当于None。**
 
 ```python
-# 函数返回值
-def fun01(acount):
-    print("fun01()执行了")
+"""
+    函数返回值 语法
+"""
+# 参数：调用者传递给定义者的信息
+# 返回值：定义者传递给调用者的结果
+def fun01(a):
+    print("fun01执行喽")
+    # 作用：1. 返回结果  2.退出方法
     return 20
-	# print("fun01()又执行了") # return后的语句不会执行
+    print("fun01又执行喽")
 
+# F8 逐过程　（调试时跳过方法）
+# F7 逐语句  （调试时进入方法）
 re = fun01(10)
 print(re)
 
 # 无返回值函数
 def fun02(a):
-    print("fun02()执行了")
+    print("fun01执行喽")
+    # return None
 
-
-re02 = fun02(100)
-print(re02)  # None
+re = fun02(100)
+print(re)
 ```
 
 ```python
@@ -103,11 +171,67 @@ num = add(num1, num2)
 print("两数之和是："+ str(num))
 ```
 
+练习1：定义计算四位整数，每位相加和的函数。
+
+```python
+"""
+    练习1:定义计算四位整数，每位相加和的函数.
+    测试："1234"   "5428"
+"""
+
+
+def each_unit_sum(number):
+    """
+        计算整数的每位相加和
+    :param number: 四位整数
+    :return: 相加的结果
+    """
+    result = number % 10
+    result += number // 10 % 10
+    result += number // 100 % 10
+    result += number // 1000
+    return result
+
+
+# 测试
+re01 = each_unit_sum(1234)
+print(re01)
+re01 = each_unit_sum(4875)
+print(re01)
+```
+
+
+
+练习2:定义根据两,计算几斤零几两的函数.
+
+```python
+# weight_liang = int(input("请输入两："))
+# jin = weight_liang // 16
+# liang = weight_liang % 16
+# print(str(jin) + "斤零" + str(liang) + "两")
+
+def get_weight_for_jin(liang_weight):
+    """
+        根据两,计算几斤零几两.
+    :param liang_weight:需要计算的两
+    :return: 元组 (斤,两)
+    """
+    jin = liang_weight // 16
+    liang = liang_weight % 16
+    return (jin,liang)
+re = get_weight_for_jin(100)
+print(str(re[0]) + "斤零" + str(re[1]) + "两")
+```
+
+
+
+练习：定义函数，根据分数判断学生成绩优良中差。
+
 
 
 ## 2.传参
 
-​	函数的传参有两种：不可变类型和可变类型参数。不可变类型参数包括：数值型(整数、浮点数、复数)、布尔型、空值、字符串、元组、固定集合；可变类型参数有：列表、字典、集合。不可变类型的数据传参时，函数内部不会改变原数据的值，可变类型数据类型传参时，函数内部可以改变原数据。
+​	函数的传参有两种：不可变类型和可变类型参数。不可变类型参数包括：数值型(整数、浮点数、复数)、布尔型、空值、字符串、元组、固定集合；可变类型参数有：列表、字典、集合。**不可变类型的数据传参时，函数内部不会改变原数据的值，可变类型数据类型传参时，函数内部可以改变原数据。**
 
 ```python
 def print_rectangle(r_count, c_count, char):
@@ -159,9 +283,17 @@ fun03(list01)
 print(list01[0])# 1
 ```
 
+![函数内存图1](第七章 Python函数.assets/函数内存图1-1667829965725.jpg)
+
+<img src="第七章 Python函数.assets/函数内存图2-1667829976327.jpg" alt="函数内存图2" style="zoom:50%;" />
 
 
-![函数内存图4](第七章 Python函数.assets/函数内存图4.jpg)
+
+<img src="第七章 Python函数.assets/函数内存图3.jpg" alt="函数内存图3" />
+
+
+
+<img src="第七章 Python函数.assets/函数内存图3.jpg" alt="函数内存图3" style="zoom:50%;" />
 
 
 
@@ -274,7 +406,7 @@ print("调用"+str(count)+"次")
 
 ### 5.1.实参传递方式
 
-​	实参的传递分为位置实参、关键字实参、序列实参、字典实参。
+​	实参的传递分为**位置实参、关键字实参、序列实参、字典实参。**
 
 ```python
 # 函数参数的传递--实参argument
@@ -417,7 +549,7 @@ print(adds(1, 4, 5, 6))
 
 ​	递归是一个函数过程在定义中直接或间接调用自身的一种方法，它通过把一个大型的复杂问题转换为一个与原问题相似，但规模较小的问题进行求解，减少了代码量。
 
-​	函数递归调用时，需要确定两点：一是递归公式，而是边界条件。递归公式是函数求解过程的归纳项，用于处理原问题和原问题类似的子问题。边界调节用于终止递归的调用。
+ 	函数递归调用时，需要确定两点：一是递归公式，而是边界条件。递归公式是函数求解过程的归纳项，用于处理原问题和原问题类似的子问题。边界调节用于终止递归的调用。
 
 ​	例：求10的阶乘：
 

@@ -12,4 +12,4 @@ print(dict01)  # {'name': 'lisi'}
 #     dict01[i] = i*i
 # print(dict01)
 dict01 = {i: i*i for i in range(1, 11) if i > 5}
-print(dict01)/66
+print(dict01)
