@@ -21,7 +21,7 @@ IO网络编程
 
  * shell命令： 接收用户命令，然后调用相应的应用程序，并根据用户输入的指令来反馈给用户指定的信息。
 
-![Linux](img/linux.jpg)
+![Linux](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716473.jpg)
 
 ## shell命令
 
@@ -29,7 +29,7 @@ IO网络编程
 
 * linux下的目录结构
 
-![Linux](img/linux_fs.jpg)
+![Linux](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716475.jpg)
 
 | 作用 | 命令 |
 | --- | --- |
@@ -263,7 +263,7 @@ with open('file','r+') as f:
 
 背景 ： 实际工作中工程师无法完全按照七层模型要求操作，逐渐演化为更符合实际情况的四层
 
-![TCP/IP模型](img/1_tcpip模型.png)
+![TCP/IP模型](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716476.png)
 
 #### 数据传输过程
 
@@ -272,7 +272,7 @@ with open('file','r+') as f:
 3. 目标主机由物理层逐层解析首部消息包，最终到应用程序呈现消息。
    
 
-![TCP/IP模型](img/1_TCP.png)
+![TCP/IP模型](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716477.png)
 
 #### 网络协议
 
@@ -321,7 +321,7 @@ with open('file','r+') as f:
 >>服务器收到请求后，回复报文确定可以连接
 >>客户端收到回复，发送最终报文连接建立
 
-![](img/1_三次握手.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716478.png)
 					
 >四次挥手（断开连接）
 >>主动方发送报文请求断开连接
@@ -329,7 +329,7 @@ with open('file','r+') as f:
 >>被动方准备就绪，再次发送报文表示可以断开
 >>主动方收到确定，发送最终报文完成断开
 
-![](img/1_四次挥手.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716479.png)
 
 
 3. 适用情况 ： 对数据传输准确性有明确要求，传数文件较大，需要确保可靠性的情况。比如：网页获取，文件下载，邮件收发。
@@ -366,7 +366,7 @@ with open('file','r+') as f:
 
 #### 服务端流程
 
-![](img/1_TCP_Server.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716480.png)
 ***代码实现：day5/tcp_server.py***
 
 1. 创建套接字
@@ -385,7 +385,7 @@ sockfd=socket.socket(socket_family=AF_INET,socket_type=SOCK_STREAM,proto=0)
 >网络地址 ： '172.40.91.185'
 >自动获取地址： '0.0.0.0'
 
-![](img/address.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716481.png)
 
 ```python
 sockfd.bind(addr)
@@ -433,7 +433,7 @@ sockfd.close()
 
 ***代码实现：day5/tcp_client.py***
 
-![](img/1_TCP_Client.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716482.png)
 		  
 1. 创建套接字
 >注意:只有相同类型的套接字才能进行通信
@@ -480,7 +480,7 @@ sockfd.connect(server_addr)
 
 #### 服务端流程
 
-![](img/2_UDP_Server.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716483.png)
 
 ***代码实现：day6/udp_server.py***
 	  
@@ -517,7 +517,7 @@ sockfd.close()
 ```
 #### 客户端流程
 
-![](img/2_UDP_Client.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716484.png)
 
 ***代码实现：day6/udp_client.py***
 
@@ -556,7 +556,7 @@ sockfd.close()
 
 
 
-![](img/2_setsockopt.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716485.png)
 
 
 
@@ -613,7 +613,7 @@ struct.unpack(fmt,bytes_data)
 >4.服务端将响应内容以http响应格式发送给浏览器
 >5.浏览器接收到响应内容，解析展示
 
-![](img/2_网站访问.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716486.png)
     
 #### HTTP请求（request）
 

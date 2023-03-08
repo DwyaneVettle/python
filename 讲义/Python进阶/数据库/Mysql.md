@@ -29,7 +29,7 @@ MySQL数据库
 
 >融机构、游戏网站、购物网站、论坛网站 ... ... 
 
-![](img/数据库系统.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713509.png)
 
 ### 基础概念
 
@@ -69,7 +69,7 @@ MySQL数据库
 
 >数据元素 --> 记录 -->数据表 --> 数据库
 
-![](img/库结构.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713510.png)
 
 2. 数据库概念解析
 
@@ -79,7 +79,7 @@ MySQL数据库
 
 >记录： 每个行，表示一组完整的数据
 
-![](img/表结构.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713511.png)
 
 3. MySQL特点
 
@@ -197,7 +197,7 @@ drop database test;
 >>浮点类型（近似值） - FLOAT，DOUBLE
 >>比特值类型 - BIT
 
-![](img/整型.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713512.png)
 
 >对于精度比较高的东西，比如money，用decimal类型提高精度减少误差。列的声明语法是DECIMAL(M,D)。
 >>M是数字的最大位数（精度）。其范围为1～65，M 的默认值是10。
@@ -213,7 +213,7 @@ drop database test;
 >>BLOB和TEXT类型
 >>ENUM类型和SET类型
 
-![](img/字符串.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713513.png)
 
 * char 和 varchar
 >char：定长，效率高，一般用于固定长度的表单提交数据存储，默认1字符
@@ -311,7 +311,7 @@ MySQL 主要有以下几种运算符：
 
 #### 算数运算符
 
-![](img/算数.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713514.png)
 
 ```sql
 e.g.
@@ -321,7 +321,7 @@ select * from class_1 where age % 2 = 0;
 
 #### 比较运算符
 
-![](img/比较.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713515.png)
 
 ```sql
 e.g.
@@ -331,7 +331,7 @@ select * from class_1 where age in (8,9);
 ```
 
 #### 逻辑运算符
-![](img/逻辑.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713516.png)
 
 ```sql
 e.g.
@@ -339,9 +339,9 @@ select * from class_1 where sex='m' and age>9;
 ```
 
 #### 位运算符
-![](img/位.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713517.png)
 
-![](img/运算符.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713518.png)
 
 
 ### 更新表记录(update)
@@ -401,7 +401,7 @@ alter table interest add tel char(11) after name;
 >>TIME类型
 >>年份类型YEAR
 
-![](img/时间.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713519.png)
 
 #### 时间格式
 

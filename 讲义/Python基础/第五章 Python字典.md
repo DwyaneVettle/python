@@ -11,13 +11,13 @@ dictionary = {'key1':value1, 'key2':value2, 'key3':value3}
 其中：dectionary是字典名，字典元素用{}来包裹，key:value之间用冒号分隔，每个键值对之间用逗号隔开
 ```
 
-![image-20220121205913624](第五章 Python字典.assets/image-20220121205913624.png)
+![image-20220121205913624](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706683.png)
 
 ​	**字典的实现原理和查字典类似，查字典是根据部首或拼音查找对应页码，Python中字典是根据key查找value所在的位置。**
 
-<img src="第五章 Python字典.assets/image-20220121205913624.png" alt="image-20220121205913624" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706683.png" alt="image-20220121205913624" style="zoom:50%;" />
 
-![image-20221031203836986](第五章 Python字典.assets/image-20221031203836986.png)
+![image-20221031203836986](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706684.png)
 
 ### 1.2.创建字典
 
@@ -123,7 +123,7 @@ print(gdp)
 
 ​	获取字典视图的三个方法：
 
-<img src="第五章 Python字典.assets/image-20220121214652263.png" alt="image-20220121214652263" style="zoom:80%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706685.png" alt="image-20220121214652263" style="zoom:80%;" />
 
 ```python
 # 获取字典视图

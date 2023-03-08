@@ -27,7 +27,7 @@
 			【3】 操作系统调配计算机资源，确定进程状态等
 			【4】 操作系统将创建的进程提供给用户使用
 
-![](img/linux.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713429.png)
 		
 3. 进程基本概念
 
@@ -50,14 +50,14 @@
 		运行态 ： 进程占有cpu时间片正在运行
 		等待态 ： 进程暂时停止运行，让出cpu
 
-![](img/4_3态.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713430.png)
 
 
   - 五态 (在三态基础上增加新建和终止)
 		新建 ： 创建一个进程，获取资源的过程
 		终止 ： 进程结束，释放资源的过程
 
-![](img/4_5态.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713431.png)
 
   - 状态查看命令 ： ps -aux  --> STAT列
 
@@ -66,7 +66,7 @@
 >Z 僵尸
 
 >								`+` 前台进程
->
+>	
 >				l   有多线程的
 
 * 进程的运行特征
@@ -382,7 +382,7 @@ q.close()  关闭队列
 
 2. 实现方法
 
-![](img/6_ctype.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713432.png)
 
 ```python
 from multiprocessing import Value,Array
@@ -526,12 +526,12 @@ t = Thread()
 
 >同步 ： 同步是一种协作关系，为完成操作，多进程或者线程间形成一种协调，按照必要的步骤有序执行操作。
 
-![](img/7_同步.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713433.png)
 
 >互斥 ： 互斥是一种制约关系，当一个进程或者线程占有资源时会进行加锁处理，此时其他进程线程就无法操作该资源，直到解锁后才能操作。
 
 
-![](img/7_互斥.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713434.png)
 
 ### 线程同步互斥方法
 
@@ -575,7 +575,7 @@ with  lock:  上锁
 1. 定义
 >死锁是指两个或两个以上的线程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁。
 
-![](img/死锁.jpg)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171713435.jpg)
 
 2. 死锁产生条件
 

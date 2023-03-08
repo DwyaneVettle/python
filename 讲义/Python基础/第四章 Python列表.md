@@ -10,7 +10,7 @@
 
 ​	之前我们所学的变量只能存储一个元素，而列表是一个容器，可以存储N个元素，程序可以方便的对这些数据进行整体操作。它相当于Java，PHP等语言中的数组。如下图为列表示意图：
 
-<img src="第四章 Python列表.assets/image-20220120210825956.png" alt="image-20220120210825956" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704435.png" alt="image-20220120210825956" style="zoom:67%;" />
 
 ​	
 
@@ -33,7 +33,7 @@ print(lis)
 
 ​	列表的创建需要使用到中括号[]，元素与元素之间用逗号进行分隔。当然也可以使用Python中的内置函数list()来创建列表。
 
-<img src="第四章 Python列表.assets/2022-01-20_211914.png" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704436.png" style="zoom:67%;" />
 
 ```python
 # 第一种方式
@@ -42,7 +42,7 @@ lst = ['hello', 'world']
 lst = list(['hello', 'world'])
 ```
 
-<img src="第四章 Python列表.assets/image-20221011112053052.png" alt="image-20221011112053052" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704437.png" alt="image-20221011112053052" style="zoom:50%;" />
 
 ## 3.列表的特点
 
@@ -135,11 +135,11 @@ for i in range(-1, -len(list02) - 1, -1):
 
 - **获取列表指定元素的索引**
 
-<img src="第四章 Python列表.assets/2022-01-21_115816.png" style="zoom: 50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704439.png" style="zoom: 50%;" />
 
 - **获取列表中的单个元素**
 
-<img src="第四章 Python列表.assets/2022-01-21_120657.png" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704440.png" style="zoom:50%;" />
 
 ```python
 # 列表的索引
@@ -156,7 +156,7 @@ print(lst[-3])
 
 - **获取列表的多个元素-切片法**
 
-![image-20220121123148624](第四章 Python列表.assets/image-20220121123148624.png)
+![image-20220121123148624](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704441.png)
 
 ```python
 # 切片法获取列表多个元素
@@ -492,13 +492,13 @@ list01[1][0] = 900
 print(list02[1][0])#?
 ```
 
-![列表内存图04](第四章 Python列表.assets/列表内存图04-1649728499894.jpg)
+![列表内存图04](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704442.jpg)
 
-![列表内存图05](第四章 Python列表.assets/列表内存图05.jpg)
+![列表内存图05](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704443.jpg)
 
-![列表内存图06](第四章 Python列表.assets/列表内存图06.jpg)
+![列表内存图06](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704444.jpg)
 
-![列表内存图07](第四章 Python列表.assets/列表内存图07-1649728516044.jpg)
+![列表内存图07](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704445.jpg)
 
 
 
@@ -516,7 +516,7 @@ for item in list01:
 print(list02)
 ```
 
-![image-20221017222807116](第四章 Python列表.assets/image-20221017222807116.png)
+![image-20221017222807116](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704446.png)
 
 2.在控制台中录入５个数字，打印最大值（不使用max）。
 
@@ -567,4 +567,4 @@ for i in range(len(list01)-1,-1,-1):
 print(list01)
 ```
 
-![image-20221017223846566](第四章 Python列表.assets/image-20221017223846566.png)
+![image-20221017223846566](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704447.png)

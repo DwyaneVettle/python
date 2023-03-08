@@ -56,7 +56,7 @@
 
 >除了以上几种常见的逻辑结构外，数据结构中还包含其他的结构，比如集合等。有时根据实际情况抽象的模型不止是简单的某一种，也可能拥有更多的特征。
 
-![逻辑结构](./img/data1.png)
+![逻辑结构](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715504.png)
 
 ### 存储结构（关系）
 
@@ -119,7 +119,7 @@ L
 1. 定义
 >将线性表L=(a0,a1,……,an-1)中各元素分布在存储器的不同存储块，称为结点，每个结点（尾节点除外）中都持有一个指向下一个节点的引用，这样所得到的存储结构为链表结构。
 
-![链表结构](./img/data2.png)
+![链表结构](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715505.png)
 
 2. 特点
 >* 逻辑上相邻的元素 ai, ai+1，其存储位置也不一定相邻；
@@ -144,7 +144,7 @@ L
 >* 栈只能在一端进行数据操作
 >* 栈模型具有先进后出或者叫做后进先出的规律
 
-![栈](img/data5.png)
+![栈](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715506.png)
 
 3. 栈的代码实现 
 
@@ -163,7 +163,7 @@ L
 >* 队列只能在队头和队尾进行数据操作
 >* 队列模型具有先进先出或者叫做后进后出的规律
 
-![队列](img/data6.png)
+![队列](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715507.png)
 
 3. 队列的代码实现 
 
@@ -179,7 +179,7 @@ L
 1. 定义
 >树（Tree）是n（n≥0）个节点的有限集合T，它满足两个条件：有且仅有一个特定的称为根（Root）的节点；其余的节点可以分为m（m≥0）个互不相交的有限集合T1、T2、……、Tm，其中每一个集合又是一棵树，并称为其根的子树（Subtree）。
 
-![](img/data7.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715508.png)
 
 
 2. 基本概念 
@@ -192,7 +192,7 @@ L
 
 >* 节点的层数等于父节点的层数加一，根节点的层数定义为一。树中节点层数的最大值称为该树的高度或深度。
 
-![](img/data8.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715509.png)
 
 ### 二叉树
 
@@ -201,7 +201,7 @@ L
 1. 定义
 >二叉树（Binary Tree）是n（n≥0）个节点的有限集合，它或者是空集（n＝0），或者是由一个根节点以及两棵互不相交的、分别称为左子树和右子树的二叉树组成。二叉树与普通有序树不同，二叉树严格区分左孩子和右孩子，即使只有一个子节点也要区分左右。
 
-![](img/data9.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715511.png)
 
 2. 二叉树的特征
 
@@ -261,7 +261,7 @@ L
 ]
 ```
 
-![](img/bitree1.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171715512.png)
 
 
 ##### 二叉树链式存储

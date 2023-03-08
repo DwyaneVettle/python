@@ -6,13 +6,13 @@
 
 ​	1996年，计算机科学家证明了任何简单或复杂的算法都可以由顺序结构、选择结构和循环结构这三种基本结构组成。
 
-![image-20220118163640774](第三章 Python流程控制.assets/image-20220118163640774.png)
+![image-20220118163640774](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703331.png)
 
 ## 2.顺序结构
 
 ​	顺序结构就是程序按从上到下的顺序执行代码，中间没有任何的判断和跳转，直程序结束。
 
-![image-20220118164202710](第三章 Python流程控制.assets/image-20220118164202710.png)
+![image-20220118164202710](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703332.png)
 
 ```python
 print('1.程序开始')
@@ -52,7 +52,7 @@ print(bool(set()))  # 空集合
 
 ​	程序根据判断条件的布尔值选择性的执行部分代码，明确让计算机知道在什么条件下，该去做什么。
 
-<img src="第三章 Python流程控制.assets/image-20220118211810551.png" alt="image-20220118211810551" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703333.png" alt="image-20220118211810551" style="zoom:67%;" />
 
 ​	而选择结构因其功能性的不同分为单分支、双分支和多分支，单分支的结构类似如果.....就.......，语法结构为：
 
@@ -63,7 +63,7 @@ if 条件表达式:
 print("---")
 ```
 
-<img src="第三章 Python流程控制.assets/image-20220118212627821.png" alt="image-20220118212627821" style="zoom: 67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703334.png" alt="image-20220118212627821" style="zoom: 67%;" />
 
 ```python
 # 单分支条件表达式
@@ -84,7 +84,7 @@ else :
     条件执行体2
 ```
 
-<img src="第三章 Python流程控制.assets/image-20220118213506415.png" alt="image-20220118213506415" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703335.png" alt="image-20220118213506415" style="zoom:67%;" />
 
 ```python
 # 双分支条件
@@ -111,7 +111,7 @@ else:
 	条件执行体N+1
 ```
 
-<img src="第三章 Python流程控制.assets/1.jpg" style="zoom: 67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703336.jpg" style="zoom: 67%;" />
 
 ```python
 # 多分支判断
@@ -215,7 +215,7 @@ else:
 
 ​	反复做一件事就是循环。Python中的循环有两种:while循环和for-in循环。
 
-<img src="第三章 Python流程控制.assets/image-20220119224225691.png" alt="image-20220119224225691" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703337.png" alt="image-20220119224225691" style="zoom:67%;" />
 
 ### 8.1.while循环
 
@@ -241,7 +241,7 @@ while a < 10:
 
 ​	while循环的执行流程一共分为四步：初始化变量、条件判断、条件执行体、改变变量
 
-<img src="第三章 Python流程控制.assets/image-20220120142901669.png" alt="image-20220120142901669" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703338.png" alt="image-20220120142901669" style="zoom:50%;" />
 
 ​	练习：计算0-4之间的和：
 
@@ -312,7 +312,7 @@ for 自定义变量 in 可迭代对象:
     循环体
 ```
 
-<img src="第三章 Python流程控制.assets/image-20220120175200936.png" alt="image-20220120175200936" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703339.png" alt="image-20220120175200936" style="zoom:67%;" />
 
 ​	**for-in循环中的循环体不需要访问自定义变量，可以将自定义变量替代为下划线。**
 
@@ -441,7 +441,7 @@ for item in range(1,51):
 
 ​	对于else语句，大家并不陌生，在Java、PHP中等语言中通常都是和if条件语句配合，但在Python中的用法有一些不同，和else搭配的方式有三种：
 
-<img src="第三章 Python流程控制.assets/image-20220120195332649.png" alt="image-20220120195332649" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703340.png" alt="image-20220120195332649" style="zoom:67%;" />
 
 ```python
 # else语句-输入3次密码
@@ -540,7 +540,7 @@ print("0！+1！+4！+7！+…+13!={}".format(sum+jie_0))
 
 ​	在嵌套循环中，break和continue用于控制本层的循环。如果内层循环中使用了break，那么直接跳出内循环，执行外循环；如果内循环中使用了continue，那么需要继续执行完内循环后再执行外循环。
 
-<img src="第三章 Python流程控制.assets/image-20220120202215694.png" alt="image-20220120202215694" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171703341.png" alt="image-20220120202215694" style="zoom:67%;" />
 
 ```python
 # 嵌套循环和break和continue之间的配合使用

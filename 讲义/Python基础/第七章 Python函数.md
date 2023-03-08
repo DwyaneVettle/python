@@ -283,17 +283,17 @@ fun03(list01)
 print(list01[0])# 1
 ```
 
-![函数内存图1](第七章 Python函数.assets/函数内存图1-1667829965725.jpg)
+![函数内存图1](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706331.jpg)
 
-<img src="第七章 Python函数.assets/函数内存图2-1667829976327.jpg" alt="函数内存图2" style="zoom:50%;" />
-
-
-
-<img src="第七章 Python函数.assets/函数内存图3.jpg" alt="函数内存图3" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706332.jpg" alt="函数内存图2" style="zoom:50%;" />
 
 
 
-<img src="第七章 Python函数.assets/函数内存图3.jpg" alt="函数内存图3" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706333.jpg" alt="函数内存图3" />
+
+
+
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706333.jpg" alt="函数内存图3" style="zoom:50%;" />
 
 
 
@@ -319,7 +319,7 @@ fun01()
 print(g01)  # ok
 ```
 
-<img src="第七章 Python函数.assets/全局变量内存图.jpg" alt="全局变量内存图" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706334.jpg" alt="全局变量内存图" style="zoom:67%;" />
 
 
 

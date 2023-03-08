@@ -19,7 +19,7 @@ import wftools
 wftools.net_speed_test()
 ```
 
-![](images/2022-12-04_102823.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716844.png)
 
 
 
@@ -40,7 +40,7 @@ import poimage
 poimage.decode_qrcode(qrcode_path=r"D:\qrcode.jpg")
 ```
 
-![](images/image-20221204103249711.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716845.png)
 
 
 
@@ -59,7 +59,7 @@ import popdf
 popdf.pdf2docx(file_path="HTML.pdf")
 ```
 
-![](images/image-20221204103612829.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716846.png)
 
 
 
@@ -78,7 +78,7 @@ import poimage
 poimage.add_watermark(file="qrcode.jpg", mark="你的水印")
 ```
 
-![](images/image-20221204103902900.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716847.png)
 
 
 
@@ -121,7 +121,7 @@ poimage.down4img(
     type='jpg')
 ```
 
-![](images/image-20221204105051391.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716848.png)
 
 
 
@@ -198,6 +198,6 @@ import wftools
 wftools.weather()
 ```
 
-<img src="images/image-20221204110532265.png" alt="image-20221204110532265" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171716849.png" alt="image-20221204110532265" style="zoom:50%;" />
 
 来源：www.python-office.com

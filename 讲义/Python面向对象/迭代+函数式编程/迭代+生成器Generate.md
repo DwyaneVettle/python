@@ -120,7 +120,7 @@ class 迭代器类名:
 
 迭代器对象的作用：使用者只需通过一种方式，便可简洁明了的获取聚合对象中各个元素，而又无需了解其内部结构。
 
-<img src="迭代+生成器Generate.assets/迭代器设计思想.jpg" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171711678.jpg" style="zoom:50%;" />
 
 ```python
 """

@@ -6,29 +6,29 @@
 
 2017年5月，AlphaGo Master在中国乌镇围棋峰会上，与世界排名第一的围棋冠军柯洁对战，以3比0的比分获胜。
 
-<img src="第一章 Python入门.assets/image-20220905164958661.png" alt="image-20220905164958661" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700367.png" alt="image-20220905164958661" style="zoom:50%;" />
 
-<img src="第一章 Python入门.assets/image-20220905171242574.png" alt="image-20220905171242574" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700369.png" alt="image-20220905171242574" style="zoom:50%;" />
 
 ## 1.什么是Python
 
 ​	**人生苦短，快学Python。**
 
-<img src="第一章 Python入门.assets/image-20220905165658390.png" alt="image-20220905165658390" style="zoom: 67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700370.png" alt="image-20220905165658390" style="zoom: 67%;" />
 
 ​	Python由荷兰数学和计算机科学研究学会的[吉多·范罗苏姆](https://baike.baidu.com/item/吉多·范罗苏姆/328361) 于1990 年代初设计，作为一门叫做[ABC语言](https://baike.baidu.com/item/ABC语言/334996)的替代品。  Python提供了高效的高级[数据结构](https://baike.baidu.com/item/数据结构/1450)，还能简单有效地[面向对象](https://baike.baidu.com/item/面向对象/2262089)编程。Python语法和动态类型，以及[解释型语言](https://baike.baidu.com/item/解释型语言/8888952)的本质，使它成为多数平台上写[脚本](https://baike.baidu.com/item/脚本/1697005)和快速开发应用的编程语言，  随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、[大型项目](https://baike.baidu.com/item/大型项目/3986637)的开发。官网：www.python.org 
 
-![image-20220108201723449](C:\Users\HP\AppData\Roaming\Typora\typora-user-images\image-20220108201723449.png)
+![image-20220108201723449](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700371.png)
 
 ​	Python 单词是“大蟒蛇”的意思。但是龟叔不是喜欢蟒蛇才起这个名字，而是正在追 剧：英国电视喜剧片《蒙提·派森的飞行马戏团》(Monty Python and the Flying Circus)。
 
-![](第一章 Python入门.assets/python.jpg)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700372.jpg)
 
 ​	Python和Java一样，需要安装一定的环境才能运行程序。不过我们可以通过官网提供的脚本interactive shell 来入门 Python。
 
-![](第一章 Python入门.assets/image-20220108202835791.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700373.png)
 
-![](第一章 Python入门.assets/image-20220108202853044.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700374.png)
 
 
 
@@ -42,7 +42,7 @@
 
   杂的语法，而是关注任务本身。
 
-  <img src="第一章 Python入门.assets/image-20220907203734898.png" alt="image-20220907203734898" style="zoom:33%;" />
+  <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700375.png" alt="image-20220907203734898" style="zoom:33%;" />
 
 - **免费、开源：**Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。
 
@@ -58,7 +58,7 @@
 
 
 
-<img src="第一章 Python入门.assets/image-20220907203719870.png" alt="image-20220907203719870" style="zoom:33%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700376.png" alt="image-20220907203719870" style="zoom:33%;" />
 
 ## 3.Python的应用领域
 
@@ -109,9 +109,9 @@
 
 ![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108215430848.png)
 
-![image-20220906105733899](第一章 Python入门.assets/image-20220906105733899.png)
+![image-20220906105733899](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700377.png)
 
-![image-20220109125538439](第一章 Python入门.assets/image-20220109125538439.png)
+![image-20220109125538439](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700378.png)
 
 
 
@@ -119,7 +119,7 @@
 
 ​	安装了Python的解释器后，我们可以在当前系统中Windows+R键输入cmd，再输入命令python，当看到当前Python安装版本后，就表示已经安装成功。
 
-![image-20220109130426385](第一章 Python入门.assets/image-20220109130426385.png)
+![image-20220109130426385](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700379.png)
 
 
 
@@ -147,11 +147,11 @@
 
 ​	在开始菜单栏中搜索IDLE就可以打开该程序进行使用：
 
-<img src="第一章 Python入门.assets/image-20220109214026550.png" alt="image-20220109214026550" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700380.png" alt="image-20220109214026550" style="zoom:50%;" />
 
 ​	**打开IDLE后就可以点击File-->New File创建Python源文件，创建前我们需要将文件保存为.py文件在本地才能运行，创建我们的第一个Python文件：**
 
-<img src="第一章 Python入门.assets/image-20220109220526740.png" alt="image-20220109220526740" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700381.png" alt="image-20220109220526740" style="zoom:50%;" />
 
 ```py
 print("Hello World")
@@ -160,11 +160,11 @@ print("Hello Python")
 
 ​	**写好代码后，就可以在IDLE中点击Run-->Run Model运行此Python文件了：**
 
-![image-20220109221006743](第一章 Python入门.assets/image-20220109221006743.png)
+![image-20220109221006743](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700382.png)
 
 ​	**运行结果显示在IDLE的命令行模式中可以看到**
 
-![image-20220109221053256](第一章 Python入门.assets/image-20220109221053256.png)
+![image-20220109221053256](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700383.png)
 
 ​	**尝试以下创建以下代码，查看运行结果：**
 
@@ -214,7 +214,7 @@ turtle.circle(100) #画圆
 
 - 海归绘图画奥运五环
 
-![image-20220110115421235](第一章 Python入门.assets/image-20220110115421235.png)
+![image-20220110115421235](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700384.png)
 
 ```py
 import turtle 
@@ -279,11 +279,11 @@ t.done()                    # 停止画笔绘制，窗体不关闭
 
 - 选择安装路径：
 
-<img src="第一章 Python入门.assets/image-20220110222305995.png" alt="image-20220110222305995" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700385.png" alt="image-20220110222305995" style="zoom:50%;" />
 
 - 选择以下几个选项：
 
-<img src="第一章 Python入门.assets/image-20220110222425440.png" alt="image-20220110222425440" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700386.png" alt="image-20220110222425440" style="zoom:50%;" />
 
 - Install安装
 
@@ -291,7 +291,7 @@ t.done()                    # 停止画笔绘制，窗体不关闭
 
 ## 9.Python程序执行过程分析
 
-![image-20220907203013386](第一章 Python入门.assets/image-20220907203013386.png)
+![image-20220907203013386](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700387.png)
 
 Python虽然是解释型语言，但为了提高运行效率，使用了一种编译的方法，编译之后得到pyc文件，存储了字节码（特定的Python表现形式，不是机器码）。
 
@@ -307,7 +307,7 @@ Python虽然是解释型语言，但为了提高运行效率，使用了一种�
 
 3.使用海归绘图，画出4个正方形：
 
-![image-20220110115852662](第一章 Python入门.assets/image-20220110115852662.png)
+![image-20220110115852662](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700388.png)
 
 
 
