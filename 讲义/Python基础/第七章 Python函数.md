@@ -578,8 +578,6 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
-
-
 num = int(input('请输入一个正整数: '))
 for i in range(1, num + 1):
     print(fibonacci(i), end=' ')
