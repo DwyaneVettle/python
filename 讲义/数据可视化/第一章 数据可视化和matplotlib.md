@@ -227,13 +227,25 @@
 
 - 启动Anaconda3安装程序，进入欢迎界面后点击“Next”按钮进入要求用户接收许可协议的界面，点击“T Agree”进入安装界面：
 
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302106298.png" alt="image-20230830210626183" style="zoom:33%;" />
 
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302106041.png" alt="image-20230830210640931" style="zoom:33%;" />
 
+- 这里选择为谁安装，“Just me”即只为当前用户，"All Users"即为当前主机所有用户，根据用户需求选择：
 
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302108661.png" alt="image-20230830210820578" style="zoom:33%;" />
 
+- 选择安装路径，最好不含中文路径：
 
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302109510.png" alt="image-20230830210905412" style="zoom:33%;" />
 
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302110920.png" alt="image-20230830211001837" style="zoom:33%;" />
 
+- 在开始菜单栏种找到`Anaconda3`的“Anaconda Prompt”输入命令`conda list`即可看到`Anaconda`所集成的库：
+
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308302120733.png" alt="image-20230830212053346" style="zoom:33%;" />
+
+- 点击“Jupter Notebook”即可在浏览器打开web界面编辑，选择"New--Python3"就可以创建文件了。
 
 ### 3.3.使用matplotlib绘制图表
 
