@@ -49,7 +49,7 @@ plot（x, y, fmt, scalex=True, scaley=True, data=None, label=None, *args, **kwar
    
    **示例：**要求根据下表的数据，将日期列的数据作为x轴数据，将最高气温和最低气温两列的数据作为y轴数据，使用`plot()`函数绘制下图所示的折线图。
 
-<img src="C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230830165856158.png" alt="image-20230830165856158" style="zoom:50%;" />
+<img src="C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230830165856158.png" alt="image-20230830165856158"  />
 
 ​	根据图示我们可以得知：将“日期”这一列作为x轴数据，将“最高气温”和“最低气温”两列的数据作为y轴数据，代码实现如下：
 
@@ -187,7 +187,7 @@ plt.show()
 barh(y, width, height=0.8, left=None, align='center', *, **kwargs)
 ```
 
-- **y**：表示条形的<font color="red">y值</font>>。
+- **y**：表示条形的<font color="red">y值</font>。
 - **width：**表示条形的<font color="red">宽度</font>。
 - **height：**表示条形的<font color="red">高度</font>，默认值为0.8。
 - **left：**条形左侧的<font color="red">x坐标值</font>，默认值为0。
@@ -420,10 +420,12 @@ pie(x, explode=None, labels=None, autopct=None, pctdistance=0.6, 
 - **x：**表示扇形或楔形的数据。
 - **explode：**表示扇形或楔形<font color="red">离开圆心的距离</font>。
 - **labels：**表示扇形或楔形对应的标签文本。
-- **autopct：**表示控制扇形或楔形的数值显示的字符串，可通过格式字符串<font color="red">指定小数点后的位数</font>。
+- **autopct：**表示控制扇形或楔形的数值显示的字符串，可通过格式字符串<font color="red">指定小数点后的位数</font>。%.1f%
 - **pctdistance：**表示扇形或楔形对应的数值标签距离圆心的比例，默认为0.6。
 - **shadow：**表示是否<font color="red">显示阴影</font>。
 - **labeldistance：**表示标签文本的绘制位置（相对于半径的比例），默认为1.1。
+
+绘制圆环图：
 
 ```python
 pie(x, explode=None, labels=None, autopct=None, pctdistance=0.6, 
@@ -514,7 +516,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, linewidths=None, ed
 - **x，y：**表示<font color="red">数据点的位置</font>。
 - **s：**表示<font color="red">数据点的大小</font>。
 - **c：**表示数据点的<font color="red">颜色</font>。
-- **marker：**表示数据点的样式，默认为圆形。
+- **marker：**表示数据点的样式，默认为圆形，'o'。
 - **alpha：**表示透明度，可以取值为0~1。
 - **linewidths：**表示<font color="red">数据点的描边宽度</font>。
 - **edgecolors：**表示<font color="red">数据点的描边颜色</font>。
