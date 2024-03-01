@@ -283,13 +283,13 @@ fun03(list01)
 print(list01[0])# 1
 ```
 
-![函数内存图1](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706331.jpg)
+![函数内存图1](C:%5CUsers%5CHP%5CDesktop%5C202302171706331.jpg)
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706332.jpg" alt="函数内存图2" style="zoom:50%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706332.jpg" alt="函数内存图2" style="zoom:50%;" />
 
 
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706333.jpg" alt="函数内存图3" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706333.jpg" alt="函数内存图3" />
 
 
 
@@ -319,7 +319,7 @@ fun01()
 print(g01)  # ok
 ```
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706334.jpg" alt="全局变量内存图" style="zoom:67%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706334.jpg" alt="全局变量内存图" style="zoom:67%;" />
 
 
 

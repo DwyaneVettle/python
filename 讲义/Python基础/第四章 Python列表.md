@@ -10,7 +10,7 @@
 
 ​	之前我们所学的变量只能存储一个元素，而列表是一个容器，可以存储N个元素，程序可以方便的对这些数据进行整体操作。它相当于Java，PHP等语言中的数组。如下图为列表示意图：
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704435.png" alt="image-20220120210825956" style="zoom:67%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704435.png" alt="image-20220120210825956" style="zoom:67%;" />
 
 ​	
 
@@ -33,7 +33,7 @@ print(lis)
 
 ​	列表的创建需要使用到中括号[]，元素与元素之间用逗号进行分隔。当然也可以使用Python中的内置函数list()来创建列表。
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704436.png" style="zoom:67%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704436.png" style="zoom:67%;" />
 
 ```python
 # 第一种方式
@@ -135,11 +135,11 @@ for i in range(-1, -len(list02) - 1, -1):
 
 - **获取列表指定元素的索引**
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704439.png" style="zoom: 50%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704439.png" style="zoom: 50%;" />
 
 - **获取列表中的单个元素**
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171704440.png" style="zoom:50%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704440.png" style="zoom:50%;" />
 
 ```python
 # 列表的索引

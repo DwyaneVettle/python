@@ -1,6 +1,0 @@
-import matplotlib
-matplotlib.rcParams()
-
-
-
-

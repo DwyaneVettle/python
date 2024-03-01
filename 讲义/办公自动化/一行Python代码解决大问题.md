@@ -117,7 +117,7 @@ import poimage
 
 poimage.down4img(
     url='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg',
-    output_name='程序员晚枫',
+    output_name='Michealzou',
     type='jpg')
 ```
 

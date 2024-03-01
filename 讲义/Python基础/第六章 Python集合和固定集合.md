@@ -10,7 +10,7 @@
 
 ​	集合是由一系列**不重复的不可变类型**变量组成的可变映射容器。相当于只有键没有值的字典。我们可以对它进行 同时还可以求交集、并集、补集等。**集合的定义用set()。**
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706827.jpg" style="zoom:50%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706827.jpg" style="zoom:50%;" />
 
 ### 1.1.集合的基础操作
 

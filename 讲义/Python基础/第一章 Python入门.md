@@ -14,8 +14,6 @@
 
 ​	**人生苦短，快学Python。**
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700370.png" alt="image-20220905165658390" style="zoom: 67%;" />
-
 ​	Python由荷兰数学和计算机科学研究学会的[吉多·范罗苏姆](https://baike.baidu.com/item/吉多·范罗苏姆/328361) 于1990 年代初设计，作为一门叫做[ABC语言](https://baike.baidu.com/item/ABC语言/334996)的替代品。  Python提供了高效的高级[数据结构](https://baike.baidu.com/item/数据结构/1450)，还能简单有效地[面向对象](https://baike.baidu.com/item/面向对象/2262089)编程。Python语法和动态类型，以及[解释型语言](https://baike.baidu.com/item/解释型语言/8888952)的本质，使它成为多数平台上写[脚本](https://baike.baidu.com/item/脚本/1697005)和快速开发应用的编程语言，  随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、[大型项目](https://baike.baidu.com/item/大型项目/3986637)的开发。官网：www.python.org 
 
 ![image-20220108201723449](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700371.png)
@@ -38,11 +36,9 @@
 
 - **可读性强：**可读性远比听上去重要的多得多。一个程序会被反复的修改，可读性强意味着让你  可以在更短时间内学习和记忆，直接提高生产率。
 
-- **简洁，简洁，简洁：**研究证明，程序员每天可编写的有效代码数是有限的。完成同样功能只用一半的代 码，其实就是提高了一倍的生产率。Python 是由 C 语言开发，但是不再有 C 语言中指针等复杂数据类型，Python 的 简洁性让开发难度和代码幅度大幅降低，开发任务大大简化。程序员再也不需要关注复 
+- **简洁，简洁，简洁：**研究证明，程序员每天可编写的有效代码数是有限的。完成同样功能只用一半的代 码，其实就是提高了一倍的生产率。Python 是由 C 语言开发，但是不再有 C 语言中指针等复杂数据类型，Python 的 简洁性让开发难度和代码幅度大幅降低，开发任务大大简化。程序员再也不需要关注复 杂的语法，而是关注任务本身。
 
-  杂的语法，而是关注任务本身。
-
-  <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700375.png" alt="image-20220907203734898" style="zoom:33%;" />
+  
 
 - **免费、开源：**Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。
 
@@ -57,8 +53,6 @@
 - **性能较低：**Python是解释型语言，性能较低。如果对于性能方面有要求，可以使用Java，C，Go等语言。但随着不断的发展，Python的解释器会越来越快。
 
 
-
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700376.png" alt="image-20220907203719870" style="zoom:33%;" />
 
 ## 3.Python的应用领域
 
@@ -107,11 +101,7 @@
 
 ​	我们需要进入官网（www.python.org/downloads/）下载Python解释器，并配置环境变量。在安装解释器时勾选"Add Python to enviroment variable"，这样就会将Python自动添加到环境变量Path中，我们可以在Windows环境下运行Python解释器。
 
-![](D:\笔记\Python\讲义\第一章 Python入门.assets\image-20220108215430848.png)
-
-![image-20220906105733899](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700377.png)
-
-![image-20220109125538439](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700378.png)
+![image-20240227092846196](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202402270928477.png)
 
 
 
@@ -119,7 +109,7 @@
 
 ​	安装了Python的解释器后，我们可以在当前系统中Windows+R键输入cmd，再输入命令python，当看到当前Python安装版本后，就表示已经安装成功。
 
-![image-20220109130426385](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700379.png)
+![image-20240226211510929](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202402262115989.png)
 
 
 
@@ -279,19 +269,17 @@ t.done()                    # 停止画笔绘制，窗体不关闭
 
 - 选择安装路径：
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700385.png" alt="image-20220110222305995" style="zoom:50%;" />
+
 
 - 选择以下几个选项：
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700386.png" alt="image-20220110222425440" style="zoom:50%;" />
+  
 
 - Install安装
 
 
 
 ## 9.Python程序执行过程分析
-
-![image-20220907203013386](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171700387.png)
 
 Python虽然是解释型语言，但为了提高运行效率，使用了一种编译的方法，编译之后得到pyc文件，存储了字节码（特定的Python表现形式，不是机器码）。
 

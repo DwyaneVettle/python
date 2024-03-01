@@ -11,7 +11,7 @@ dictionary = {'key1':value1, 'key2':value2, 'key3':value3}
 其中：dectionary是字典名，字典元素用{}来包裹，key:value之间用冒号分隔，每个键值对之间用逗号隔开
 ```
 
-![image-20220121205913624](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706683.png)
+![image-20220121205913624](C:%5CUsers%5CHP%5CDesktop%5C202302171706683.png)
 
 ​	**字典的实现原理和查字典类似，查字典是根据部首或拼音查找对应页码，Python中字典是根据key查找value所在的位置。**
 
@@ -123,7 +123,7 @@ print(gdp)
 
 ​	获取字典视图的三个方法：
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302171706685.png" alt="image-20220121214652263" style="zoom:80%;" />
+<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706685.png" alt="image-20220121214652263" style="zoom:80%;" />
 
 ```python
 # 获取字典视图
