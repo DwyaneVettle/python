@@ -61,7 +61,7 @@ print(c)
 
 2.第一个字符必须为字母、下划线，其后可以跟字母、下划线、数字等；
 
-3.以双下划线开头或结尾的标识符通常有特殊的含义，尽量避免这种写法。如__init__是类的构造函数；
+3.以双下划线开头或结尾的标识符通常有特殊的含义，尽量避免这种写法。如`__init__`是类的构造函数；
 
 4.不能使用关键字定义标识符，如if、else等。
 
@@ -532,7 +532,7 @@ website  =  '%s%s%s'  %  ( 'python' ,  'tab' ,  '.com' )
 
   字符串的所以可以通过正向和逆向两种方式进行索引，正向索引从0开始索引值依次加1，逆向索引从-1开始索引值依次减1：
 
-  <img src="C:%5CUsers%5CHP%5CDesktop%5C202302171702343.png" style="zoom:67%;" />
+  <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403051050768.png" style="zoom:67%;" />
 
   通过字符串的索引值可以获取指定的字符：
 
@@ -594,7 +594,7 @@ print(str12[1:5:3])  # y o
 | int()   | 将其他数据类型转换成整形   | 1、文字类或小数类字符串无法转换成整型；2、浮点类型转换成整型会抹零取整 | int('123'), int(9.8)   |
 | float() | 将其他数据类型转换成浮点型 | 1、文字无法转换；2、整型转浮点型，末尾加.0                   | float('9.9'), float(9) |
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171702344.png" alt="image-20220115174752944" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403051135631.png" alt="image-20220115174752944" style="zoom:50%;" />
 
 ```python
 name = '张三'
