@@ -1,0 +1,16 @@
+import numpy as np
+a=np.array([[1,1,1],[0,2,5],[2,5,-1]])
+print('数组a:')
+print(a)
+
+ainv=np.linalg.inv(a)
+print('a的逆矩阵')
+print(ainv)
+print("===========")
+b=np.array([[6],[-4],[27]])
+print('矩阵b:')
+print(b)
+print("===========")
+x=np.linalg.solve(a,b)
+print('计算：A^(-1)B:')
+print(x)
