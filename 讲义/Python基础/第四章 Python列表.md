@@ -10,7 +10,7 @@
 
 ​	之前我们所学的变量只能存储一个元素，而列表是一个容器，可以存储N个元素，程序可以方便的对这些数据进行整体操作。它相当于Java，PHP等语言中的数组。如下图为列表示意图：
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704435.png" alt="image-20220120210825956" style="zoom:67%;" />
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403181109488.jpg)
 
 ​	
 
@@ -33,7 +33,7 @@ print(lis)
 
 ​	列表的创建需要使用到中括号[]，元素与元素之间用逗号进行分隔。当然也可以使用Python中的内置函数list()来创建列表。
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704436.png" style="zoom:67%;" />
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403181109501.jpg)
 
 ```python
 # 第一种方式
@@ -135,11 +135,11 @@ for i in range(-1, -len(list02) - 1, -1):
 
 - **获取列表指定元素的索引**
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704439.png" style="zoom: 50%;" />
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403181109502.jpg)
 
 - **获取列表中的单个元素**
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171704440.png" style="zoom:50%;" />
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202403181109503.jpg)
 
 ```python
 # 列表的索引
@@ -350,19 +350,18 @@ for item in list_person:
 2.在控制台中录入，所有学生成绩，输入空字符串，打印(一行一个)所有成绩，并打印最高分,打印最低分,打印平均分。
 
 ```python
-list_score = []
-# 录入过程
+stu_score = []
 while True:
-    str_score = input("请输入成绩：")
-    if str_score == "":
+    score = input("请输入成绩：")
+    if score == "":
         break
-list_score.append(int(str_score))  # 输出过程
-for item in list_score:
+    stu_score.append(int(score))
+for item in stu_score:
     print(item)
 
-print("最高分：" + str(max(list_score)))
-print("最低分：" + str(min(list_score)))
-print("平均分：" + str(sum(list_score) / len(list_score)))
+print("最高分为:" + str(max(stu_score)))
+print("最低分为:" + str(min(stu_score)))
+print("平均分为:" + str(sum(stu_score) / len(stu_score)))
 ```
 
 
