@@ -240,6 +240,12 @@ print(student)  # TypeError: unhashable type: 'list'
 ​	在Python中也可以使用内置函数zip()来生成字典。它用于将可迭代对象作为参数，将对象中对应的参数打包成一个元组，然后返回这些由元组组成的列表。
 
 ```python
+{k:v for k,v in zip(key,value)}
+```
+
+
+
+```python
 items = ['Fruits', 'Books', 'Others']
 prices = [100, 101, 102]
 s = {item.upper(): price for item, price in zip(items, prices)}
