@@ -1,4 +1,4 @@
-#  第五章 Python字典与元组
+#  c第五章 Python字典与元组
 
 ## 1.字典
 
@@ -459,7 +459,7 @@ for name, list_bobby in dict_person_bobby.items():
         景区：九寨沟,峨眉山,春熙路．
         美食: 火锅,串串香,兔头
 
-## 2元组-tuple	
+## 2.元组-tuple	
 
 ​	元组是由一系列变量组成的不可变的序列容器。不可变是指一旦创建，不可以再添加/删除/修改元素。
 
@@ -484,6 +484,13 @@ for name, list_bobby in dict_person_bobby.items():
   元组名 = 10,20,30
   元组名 = tuple(可迭代对象)
   ```
+
+- 两个方法：
+
+```python
+count(argument)  -- 返回对应元素的个数
+index(argument)  -- 返回对应元素的下标
+```
 
 
 
