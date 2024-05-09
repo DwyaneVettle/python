@@ -4,7 +4,7 @@
 """
 # 1.创建元组 (), tuple(可迭代的序列)
 tup01 = ()
-tup02 = (10, True, "hello", 12.12, 10)
+tup02 = (10, True, "hello", 12.12, 10, 10)
 tup03 = tuple("python")
 print(tup02.count(10))  # 返回元素对应的个数
 print(tup02.index(10))  # 返回元素的下标

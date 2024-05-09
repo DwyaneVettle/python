@@ -283,13 +283,13 @@ fun03(list01)
 print(list01[0])# 1
 ```
 
-![函数内存图1](C:%5CUsers%5CHP%5CDesktop%5C202302171706331.jpg)
+![函数内存图1](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202405070930577.jpg)
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706332.jpg" alt="函数内存图2" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202405070931735.jpg" alt="函数内存图2" style="zoom:50%;" />
 
 
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706333.jpg" alt="函数内存图3" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202405070931276.jpg" alt="函数内存图3" />
 
 
 
@@ -299,7 +299,7 @@ print(list01[0])# 1
 
 ## 4.作用域LEGB
 
-​	函数中变量的作用域就是它起作用的范围，作用域有4中分类：局部作用域Local--函数内部；外部嵌套作用域Enclosing--函数嵌套；全局作用域global--模块(.py文件)内部；内置模块作用域Builtin--builtins.py文件内。
+​	函数中变量的作用域就是它起作用的范围，作用域有4中分类：局部作用域Local--函数内部；外部嵌套作用域Enclosing--函数嵌套；全局作用域global--模块(.py文件)内部；内置模块作用	Builtin--builtins.py文件内。
 
 ```python
 # 函数的作用域
@@ -319,7 +319,7 @@ fun01()
 print(g01)  # ok
 ```
 
-<img src="C:%5CUsers%5CHP%5CDesktop%5C202302171706334.jpg" alt="全局变量内存图" style="zoom:67%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202404191550022.jpg" alt="全局变量内存图" style="zoom:67%;" />
 
 
 
