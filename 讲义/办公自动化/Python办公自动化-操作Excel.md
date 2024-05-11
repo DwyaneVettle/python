@@ -429,3 +429,227 @@ nexbo.save(r"d:\abc\233.xls")  # 保存工作簿
 | font.escapement=xlwt.Font.ESCAPEMENT_NONE | 字体效果。ESCAPEMENT_SUPERSCRIPT字体悬空位于上方；ESCAPEMENT_SUBSCRIPT字体悬空位于下方；ESCAPEMENT_NONE字体不悬空 |
 | font.colour_index=33                      | 参考颜色值                                                   |
 
+#### 3.4.设置边框属性(Borders)
+
+**实例21：**打开工作表“饮料销售情况.xls”及其中的工作表sheet1，在单元格B13中分别设置上边框、下边框、左边框、右边框，同时写入“文字格式”字样，并将工作簿以“234.xls”为名进行保存：
+
+```python
+import xlrd
+import xlwt
+from xlutils.copy import copy
+
+exbo = xlrd.open_workbook(r"d:\abc\饮料销售情况.xls")
+
+nexbo = copy(exbo)  # 复制工作簿
+nsht = nexbo.get_sheet(0)  # 打开新的工作表
+
+style = xlwt.XFStyle()  # 初始化样式（第1步）
+
+borders = xlwt.Borders()  # 创建边框属性对象（第2步）
+
+borders.top = 1  # 进行设置（第3步）
+borders.bottom = 2
+borders.left = 3
+borders.right = 4
+
+style.borders = borders  # 将设置好的属性对象赋值给style对应的属性（第4步）
+nsht.write(12, 1, "文字格式", style)  # 写入数据时使用style对象（第5步）
+
+nexbo.save(r"d:\abc\234.xls")  # 保存工作簿
+```
+
+边框属性的各种具体数值的说明如下表：
+
+| 边框属性                 | 说明                                           |
+| ------------------------ | ---------------------------------------------- |
+| borders.top=2            | 上边框，数字为像素单位，数字越大线越粗（下同） |
+| borders.bottom=2         | 下边框                                         |
+| borders.left=2           | 左边框                                         |
+| borders.right=2          | 右边框                                         |
+| borders.left_colour=33   | 左边框的颜色，参考颜色值                       |
+| borders.right_colour=33  | 有边框颜色                                     |
+| borders.top_colour=33    | 上边框颜色                                     |
+| borders.bottom_colour=33 | 下边框颜色                                     |
+
+#### 3.5.打开对齐属性(Alignment)
+
+**实例22：**打开工作表“饮料销售情况.xls”及其中的工作表sheet1，在单元格B13中写入“文字格式”，设置相应的对齐方式，并将工作簿以“235.xls”为名进行保存：
+
+```python
+import xlrd
+import xlwt
+from xlutils.copy import copy
+
+exbo = xlrd.open_workbook(r"d:\abc\饮料销售情况.xls")
+
+nexbo = copy(exbo)  # 复制工作簿
+nsht = nexbo.get_sheet(0)  # 打开新的工作表
+
+style = xlwt.XFStyle()  # 初始化样式（第1步）
+
+alignment = xlwt.Alignment()  # 创建对齐属性对象（第2步）
+
+alignment.vert = xlwt.Alignment.VERT_TOP  # 进行设置（第3步）
+alignment.horz = xlwt.Alignment.HORZ_RIGHT
+
+style.alignment = alignment  # 将设置好的属性对象赋值给style对应的属性（第4步）
+nsht.write(12, 1, "文字格式", style)  # 写入数据时使用style对象（第5步）
+
+nexbo.save(r"d:\abc\235.xls")  # 保存工作簿
+```
+
+对齐属性的各种具体数值及说明如下表：
+
+| 对齐属性                                | 说明                                    |
+| --------------------------------------- | --------------------------------------- |
+| aligment.vert=xlwt.Aligment.VERT_TOP    | VERT_TOP等价于0x00，垂直方向上对齐      |
+| aligment.vert=xlwt.Aligment.VERT_CENTER | VERT_CENTER等价于0x01，垂直方向居中对齐 |
+| aligment.vert=xlwt.Aligment.VERT_BOTTOM | VERT_BOTTOM等价于0x02，垂直方向下对齐   |
+| aligment.vert=xlwt.Aligment.HORZ_LEFT   | HORZ_LEFT等价于0x01，水平方向左对齐     |
+| aligment.vert=xlwt.Aligment.HORZ_CENTER | HORZ_CENTER等价于0x02，水平方向居中对齐 |
+| aligment.vert=xlwt.Aligment.HORZ_RIGHT  | HORZ_RIGHT等价于0x03，水平方向右对齐    |
+
+#### 3.6.设置背景属性(Pattern)
+
+**实例23：**打开工作簿“饮料销售情况.xls”及其中的工作表sheet1，在单元格B13中写入“文字格式”并设置相应的背景颜色，将工作簿以“236.xls”为名进行保存：
+
+```python
+import xlrd
+import xlwt
+from xlutils.copy import copy
+
+exbo = xlrd.open_workbook(r"d:\abc\饮料销售情况.xls")
+
+nexbo = copy(exbo)  # 复制工作簿
+nsht = nexbo.get_sheet(0)  # 打开新的工作表
+
+style = xlwt.XFStyle()  # 初始化样式（第1步）
+
+pattern = xlwt.Pattern()  # 创建背景属性对象（第2步）
+
+pattern.pattern = xlwt.Pattern.SOLID_PATTERN  # 进行设置（第3步）
+pattern.pattern_fore_colour = 3
+
+style.pattern = pattern  # 将设置好的属性对象赋值给style对应的属性（第4步）
+nsht.write(12, 1, "文字格式", style)  # 写入数据时使用style对象（第5步）
+
+nexbo.save(r"d:\abc\236.xls")  # 保存工作簿
+```
+
+背景属性各种数值及说明如下表：
+
+| 背景属性                                 | 说明     |
+| ---------------------------------------- | -------- |
+| pattern.pattern=xlwt.Pattern.SOLID_PATTE | 设置模式 |
+| pattern.pattern_fore_colour=3            | 设置颜色 |
+
+#### 3.7.设置字体颜色
+
+**实例24：**打开工作簿“饮料销售情况.xls”及其中的工作表sheet1，将所有内容的字体颜色进行设置，并将工作簿以“237.xls”为名进行保存：
+
+```python
+import xlwings as xw
+
+app = xw.App(visible=True, add_book=False)
+exbo = app.books.open(r"d:\abc\饮料销售情况.xls")
+she = exbo.sheets["sheet1"]
+
+fw = she.range("A1:F10")  # 设置工作范围
+
+
+def zh(r, g, b):  # 转换函数
+    return (2 ** 16) * b + (2 ** 8) * g * r
+
+
+fw.api.Font.Color = zh(12, 56, 122)  # 设置颜色
+
+exbo.save(r"d:\abc\237.xls")  # 保存工作簿
+exbo.close()
+app.quit()
+```
+
+#### 3.8.设置表格边框
+
+**实例25：**打开工作簿“饮料销售情况.xls”及其中的工作表sheet1，将其部分边框进行设置，并将工作簿以“238.xls”为名进行保存：
+
+```python
+import xlwings as xw
+
+app = xw.App(visible=True, add_book=False)
+exbo = app.books.open(r"d:\abc\饮料销售情况.xls")
+she = exbo.sheets["sheet1"]
+
+fw = she.range("B2:F10")  # 设置工作范围
+
+fw.api.Borders(7).LineStyle = 2  # 左边框
+fw.api.Borders(7).Weight = 3
+fw.api.Borders(8).LineStyle = 2  # 上边框
+fw.api.Borders(8).Weight = 3
+fw.api.Borders(9).LineStyle = 2  # 下边框
+fw.api.Borders(9).Weight = 3
+fw.api.Borders(10).LineStyle = 2  # 右边框
+fw.api.Borders(10).Weight = 3
+fw.api.Borders(11).LineStyle = 2  # 内部垂直边框
+fw.api.Borders(11).Weight = 3
+fw.api.Borders(12).LineStyle = 2  # 内部水平边框
+fw.api.Borders(12).Weight = 3
+
+exbo.save(r"d:\abc\238.xls")  # 保存工作簿
+exbo.close()
+app.quit()
+```
+
+设置表格边框设计的具体数值及说明如下表：
+
+**边框属性设置：**
+
+| 值        | 说明     | 值     | 说明           |
+| --------- | -------- | ------ | -------------- |
+| 7         | 左边边框 | 5      | 左上角到右下角 |
+| 8         | 顶部边框 | 6      | 左下角到右上角 |
+| 9         | 底部边框 | 11     | 内部垂直边框   |
+| 10        | 右边边框 | 12     | 内部水平边框   |
+| LineStyle | 线的风格 | Weight | 线的粗细       |
+
+**边框样式设置：**
+
+| 样式         | 值   | 说明   |
+| ------------ | ---- | ------ |
+| Transparent  | 0    | 透明   |
+| Solid        | 1    | 实线   |
+| Dashes       | 2    | 虚线   |
+| Double Solid | 8    | 双实线 |
+
+#### 3.9.设置行高、列宽、内容位置
+
+**实例26：**打开工作簿“饮料销售情况.xls”及其中的工作表sheet1，将其部分行高、列宽进行设置，同时设置工作表中的内容在单元格中的位置，并将工作簿以“239.xls”为名进行保存：
+
+```python
+import xlwings as xw
+
+app = xw.App(visible=True, add_book=False)
+exbo = app.books.open(r"d:\abc\饮料销售情况.xls")
+she = exbo.sheets["sheet1"]
+
+fw = she.range("B2:F10")  # 设置工作范围
+fw.column_width = 8  # 设置列宽
+fw.row_height = 25  # 设置行高
+fw.api.HorizontalAlignment = -4152  # 设置靠右
+fw.api.VerticalAlignment = -4107  # 设置靠下
+
+exbo.save(r"d:\abc\239.xls")  # 保存工作簿
+exbo.close()
+app.quit()
+```
+
+内容在单元格中的位置属性设置如下表：
+
+| 属性                         | 值    | 说明 |
+| ---------------------------- | ----- | ---- |
+| HorizontalAligment(水平方向) | -4152 | 靠右 |
+|                              | -4108 | 居中 |
+|                              | -4131 | 靠左 |
+| VerticalAligment(垂直方向)   | -4160 | 靠上 |
+|                              | -4108 | 居中 |
+|                              | -4107 | 靠下 |
+
