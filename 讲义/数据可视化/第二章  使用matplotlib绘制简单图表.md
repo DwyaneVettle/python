@@ -49,7 +49,7 @@ plot（x, y, fmt, scalex=True, scaley=True, data=None, label=None, *args, **kwar
    
    **示例：**要求根据下表的数据，将日期列的数据作为x轴数据，将最高气温和最低气温两列的数据作为y轴数据，使用`plot()`函数绘制下图所示的折线图。
 
-<img src="C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230830165856158.png" alt="image-20230830165856158"  />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202405171136840.png" alt="image-20230830165856158"  />
 
 ​	根据图示我们可以得知：将“日期”这一列作为x轴数据，将“最高气温”和“最低气温”两列的数据作为y轴数据，代码实现如下：
 
@@ -479,7 +479,7 @@ plt.show()
 
 ​	本实例要求根据下表的数据，将分类列的数据作为饼图的标签，将各分类对应的金额与总支出金额的比例作为饼图的数据，使用pie()函数绘制下图所示的饼图。
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202309011148370.png" alt="image-20230901114823288" style="zoom:50%;" />
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202309011148370.png" alt="image-20230901114823288" style="zoom: 150%;" />
 
 <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202309011149044.png" alt="image-20230901114902930" style="zoom:50%;" />
 

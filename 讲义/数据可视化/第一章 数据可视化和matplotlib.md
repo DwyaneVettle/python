@@ -111,13 +111,13 @@
 
 <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308301056341.png" alt="image-20230830105618253" style="zoom:50%;" />
 
-​                                                                                成都上半年的降雨量
+​                                                                              成都上半年的降雨量
 
 - **雷达图：**雷达图又称蜘蛛网图、星状图、极区图，由一组坐标轴和多个等距<font color="red">**同心圆或多边形**</font>组成，是一种表现<font color="red">**多维（4维以上）数据**</font>的图表。
 
 <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202308301058461.png" alt="image-20230830105830307" style="zoom:50%;" />
 
-​                                                                 某人通过霍兰德职业兴趣测试的结果
+​                                                                某人通过霍兰德职业兴趣测试的结果
 
 - **统计地图：**统计地图是一种以<font color="red">**地图**</font>为背景，使用各种<font color="red">**线纹、色彩、几何图形或实物形象**</font>标注指标数值的大小及其在不同地理位置的分布状况的图表。
 
